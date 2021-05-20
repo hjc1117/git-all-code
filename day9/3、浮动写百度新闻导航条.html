@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动百度新闻导航条</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 100%;
+            background-color: rgb(1,32,79);
+        }
+        ul{
+            width: 990px;
+            /* background: rgb(235, 138, 138); */
+            margin: 0 auto;
+            height: 40px;
+        }
+
+        ul li{
+            list-style: none;
+            height: 40px;
+            line-height: 40px;
+            /* border: 1px solid black; */
+            float: left;
+            padding: 0 10px;
+            font-size: 14px;
+            font-weight: 600;
+            color: white;
+        }
+
+        #top{
+            padding-left: 30px;
+           
+            background: url(./img/top.png) no-repeat 1px 1px;
+            background-color: rgb(204,0,0);
+        }
+
+        li:hover{
+            background-color: rgb(204,0,0);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li id="top">首页</li>
+            <li>国内</li>
+            <li>国际</li>
+            <li>军事</li>
+            <li>财经</li>
+            <li>娱乐</li>
+            <li>体育</li>
+            <li>互联网</li>
+            <li>科技</li>
+            <li>游戏</li>
+            <li>女人</li>
+            <li>汽车</li>
+            <li>房产</li>
+            
+        </ul>
+        <!-- <div style="width: 100px;height:100px;background-color:red"></div> -->
+    </div>
+   
+</body>
+</html>

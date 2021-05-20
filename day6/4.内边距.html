@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内边距</title>
+
+    <style>
+
+        /* 盒模型的计算方式：
+            宽：400+ 20+2    422  
+            高：300 +20+2    322
+         */
+
+
+        /* 
+            宽：442   400+20+20+2
+            高：342    300+20+20+2
+        
+         */
+        .a{
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            /* padding-top: 20px;
+            padding-left: 20px; */
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .b{
+            width: 300px;
+            height: 200px;
+            border: 1px solid red;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <div class="b"></div>
+    </div>
+</body>
+</html>

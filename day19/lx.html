@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .a{
+            width: 300px;
+            height: 300px;
+            position: relative;
+            margin: 150px auto;
+            transform: rotate3d(1,1,0,30deg);
+            transform-style: preserve-3d;
+        }
+        .a>div{
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            background: url(../day18/img/美图1.lnk)no-repeat;
+            background-size: cover;
+        }
+        .a div:nth-child(1){
+            transform: rotateX(90deg) translateZ(150px);
+        }
+        .a div:nth-child(2){
+            transform: rotateX(90deg) translateZ(-150px);
+        }
+        .a div:nth-child(3){
+            transform: rotateY(90deg) translateZ(150px);
+        }
+        .a div:nth-child(4){
+            transform: rotateY(90deg) translateZ(-150px);
+        }
+        .a div:nth-child(5){
+            transform: translateZ(150px);
+        }
+        .a div:nth-child(6){
+            transform:translateZ(-150px);
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

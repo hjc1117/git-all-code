@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* 只要是后代  全部生效  不论是儿子孙子还是重孙子 */
+        h1 em{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>This is a <em>important</em> heading</h1>
+    <h1>我是第二个h1 <span>span包裹起来了 <em>我是em</em></span></h1>
+    <p>This is a <em>important</em> paragraph.</p>
+</body>
+</html>

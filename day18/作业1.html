@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .a{
+            width: 90%;
+            height: 100%;
+            margin: 50px auto;
+        }
+        li{
+            list-style: none;
+            float: left;
+            border: 1px solid rgb(141, 139, 139);
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 10px;
+        }
+        @keyframes w{
+            0%{
+                transform: rotate(20deg);
+            }
+            100%{
+                transform: rotate(-20deg);
+            }
+        }
+        @keyframes q{
+            0%{
+                transform: rotate(-20deg);
+            }
+            100%{
+                transform: rotate(20deg);
+            }
+        }
+        img{
+            width: 300px;
+            height: 250px;
+        }
+        li:nth-child(odd){
+            transform: rotate(10deg);
+            animation: w 1s linear infinite alternate;
+        }
+        li:nth-child(even){
+            transform: rotate(-10deg);
+            animation: q 1s linear infinite alternate;
+        }
+        li:hover{
+            transform: scale(1.2,1.2);
+            transform: rotate(0deg);
+            /* transition: all 0.3s linear; */
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <ul>
+            <li><img src="./img/img/dance.gif" alt=""></li>
+            <li><img src="./img/img/dance.gif" alt=""></li>
+            <li><img src="./img/img/dance.gif" alt=""></li>
+            <li><img src="./img/img/dance.gif" alt=""></li>
+            <li><img src="./img/img/dance.gif" alt=""></li>
+            <li><img src="./img/img/dance.gif" alt=""></li>
+            <li><img src="./img/img/dance.gif" alt=""></li>
+            <li><img src="./img/img/dance.gif" alt=""></li>
+
+        </ul>
+    </div>
+</body>
+</html>

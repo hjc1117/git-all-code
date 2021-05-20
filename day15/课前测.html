@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .top{
+            height: 80px;
+            width: 70%;
+            margin: 0 auto;
+        }
+        .top img{
+            float: left;
+        }
+        h2{
+            float: left;
+            margin-top: 15px;
+            text-indent: 1em;
+            color: teal;
+        }
+        .mid{
+            height: 460px;
+            width: 100%;
+            background: url(./img/banner.png) no-repeat 400px 0px;
+            background-color: rgb(233, 56, 84);
+            position: relative;
+        }
+        .s{
+            height: 300px;
+            width: 350px;
+            position: absolute;
+            top: 60px;
+            right: 600px;
+            background-color: white;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+        .s1,.s2,.s3,.s4{
+            margin-top: 15px;
+            width: 100%;
+            height: 30px;
+        }
+        h3{
+            float: left;
+        }
+        p{
+            float: right;
+        }
+        .s2{
+            height: 35px;
+            overflow: hidden;
+            border: 1px solid #000;
+        }
+        .s2 input{
+            width: 270px;
+            height: 35px;
+            border: none;
+            border-left: 1px solid #000;
+            float: right;
+            text-indent: 1em;
+            outline: none;
+        }
+        button{
+            height: 40px;
+            background-color: tomato;
+            color: white;
+            font-size: 20px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        p:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <img src="./img/logo.png" alt="">
+        <h2>欢迎登陆</h2>
+    </div>
+    <div class="mid">
+        <div class="s">
+            <div class="s1">
+                <h3>京东会员</h3>
+                <p><img src="./img/login-icons_03.gif" alt="">立即注册</p>
+            </div>
+            <div class="s2">
+                <label for="use"><img src="./img/login-icons_01.gif" alt=""></label><input type="text" name="" id="use" placeholder="用户名">
+            </div>
+            <div class="s2">
+                <label for="pas"><img src="./img/login-icons_01.gif" alt=""></label><input type="password" name="" id="pas" placeholder="密码">
+            </div>
+            <div class="s3">
+                <input type="checkbox" name="" id="">自动登陆
+                <p>忘记密码?</p>
+            </div>
+            <button>登&nbsp;&nbsp;&nbsp; 陆</button>
+        </div>
+    </div>
+</body>
+</html>

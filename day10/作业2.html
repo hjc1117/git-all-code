@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 1px solid rgb(79, 117, 221);
+            width: 450px;
+            height: 620px;
+            margin: 30px auto;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        .top{
+            margin-top: -25px;
+        }
+        h3{
+            float: left;
+            color: red;
+            text-decoration: underline;
+        }
+        .a{
+            float: left;
+            position: relative;
+        }
+        .b{
+            float: right;
+            margin-top: -20px;
+        }
+        #more{
+            float: right;
+            width: 60px;
+        }
+        img{
+            display: block;
+            /* clear: both; */
+            width: 140px;
+            margin-bottom: 30px;
+        }
+        #sheng{
+            position: absolute;
+            width: 50px;
+            top: -15px;
+            left: 110px;
+        }
+        h3,p,#more:hover{
+            cursor: pointer;
+        }
+        p:hover{
+            color: red;
+        }
+    </style>    
+</head>
+<body>
+    <div class="box">
+        <div class="top">
+            <h2> <span>SHOP</span> 今日推荐<img src="./img/more.gif" alt="" id="more"></h2> 
+        </div>
+        <div class="under">
+            <div class="a">
+                <img src="./img/img7.gif" alt="">
+                <img src="./img/sheng.png" alt="" id="sheng">
+                <img src="./img/img8.gif" alt="">
+                <img src="./img/img9.gif" alt="">
+                <img src="./img/img7.gif" alt="">  
+            </div>
+            <div class="b">
+                <h3>汉来国际美食百货</h3>
+                <p>口味：创意中餐</p>
+                <p>区域：朝阳/CBD</p>
+                <h3>汉来国际美食百货</h3>
+                <p>口味：创意中餐</p>
+                <p>区域：朝阳/CBD</p>
+                <h3>汉来国际美食百货</h3>
+                <p>口味：创意中餐</p>
+                <p>区域：朝阳/CBD</p>
+                <h3>汉来国际美食百货</h3>
+                <p>口味：创意中餐</p>
+                <p>区域：朝阳/CBD</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

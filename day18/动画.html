@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .a{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-image: radial-gradient(rgb(251, 255, 23),rgb(251, 12, 211),rgb(80, 251, 12),rgb(12, 251, 251),rgb(56, 12, 251));
+            border-radius: 50%;
+            box-shadow: 0 0 30px 30px red;
+            animation: w .06s linear infinite;
+        }
+        @keyframes w{
+            0%{
+            box-shadow: 0 0 40px 40px rgb(251, 255, 23);                
+            }
+            15%{
+                box-shadow: black;
+            }
+            25%{
+            box-shadow: 0 0 160px 160px rgb(251, 12, 211);
+            }
+            40%{
+                box-shadow: black;
+            }
+            50%{
+            box-shadow: 0 0 320px 320px rgb(80, 251, 12);                
+            }
+            60%{
+                box-shadow: black;
+            }
+            75%{
+            box-shadow: 0 0 640px 640px rgb(12, 251, 251);
+            }
+            90%{
+                box-shadow: black;
+            }
+            100%{
+            box-shadow: 0 0 1280px 1280px rgb(56, 12, 251);                
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="a"></div>
+</body>
+</html>

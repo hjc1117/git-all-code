@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.logo{
+   height: 80px;
+   width: 990px;
+   margin: 0 auto; 
+   /* background-color: rgb(238, 184, 184); */
+   margin-top: 10px;
+}
+
+.left{
+    float: left;
+}
+
+.left-word{
+    line-height: 80px;
+    font-size: 22px;
+    color: #666;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.main{
+    height: 476px;
+    width: 100%;
+    background-color: #e93854;
+}
+
+.content{
+    width: 990px;
+    height: 476px;
+    background: url(./img/banner.png);
+    margin: 0 auto;
+}
+
+/* 设置京东注册框 整体框 */
+.jd_register{
+    width: 350px;
+    height: 282px;
+    /* 展示实际的大小  如果有内边距 则压缩 */
+    box-sizing: border-box;
+    background-color: #fff;
+    float: right;
+    margin-top: 45px;
+    padding: 15px 20px;
+}
+
+.item1{
+    height: 35px;
+    /* background-color: rgb(252, 198, 198); */
+}
+
+.item1 p{
+    font-size: 20px;
+    color: #666;
+    line-height: 35px;
+    float: left;
+}
+.item1 span{
+    float: right;
+    font-size: 14px;
+    color: brown;
+    margin-top: 10px;
+    padding-left: 30px;
+    background:url(./img/login-icons.png) no-repeat -99px -74px;
+}
+
+.item1 span:hover{
+    text-decoration: underline;
+}
+
+.item2{
+    height: 40px;
+    width: 100%;
+    /* background-color: rgb(236, 203, 203); */
+    margin: 10px 0px;
+    border: 1px solid #999;
+}
+
+.item2 label{
+    width: 40px;
+    height: 40px;
+    /* background-color: rgb(240, 100, 100); */
+    float: left;
+    border-right: 1px solid #999;
+    background: url(./img/login-icons.png ) 0px 0px;
+
+}
+.item2 input{
+    width: 266px;
+    height: 40px;
+    border: none;
+    text-indent: 20px;
+}

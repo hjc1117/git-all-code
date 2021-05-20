@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+    <style>
+        td{
+            border: 1px solid black;
+            width: 180px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing='0'>
+        <!-- 
+            行 tr
+            列 td
+         -->
+
+         <!-- 第一行 -->
+         <!-- colspan   列合并
+
+         rowspan   行合并 -->
+        <tr>
+            <td colspan="3">第一列</td>
+            <!-- <td>第2列</td>
+            <td>第3列</td> -->
+        </tr>
+
+        <!-- 第2行 -->
+        <tr>
+
+            <td rowspan="2">第2行第1列</td>
+            <td rowspan="2">第2行第2列</td>
+            <td>第2行第3列</td>
+        </tr>
+
+        <!-- 列合并 -->
+        <!-- 第3行 -->
+        <tr>
+
+            <!-- <td>第3行第1列</td> -->
+            <!-- <td>第3行第2列</td> -->
+            <td>第3行第3列</td>
+        </tr>
+
+         <!-- 第4行 -->
+         <tr>
+
+            <td>第4行第1列</td>
+            <td colspan="2" rowspan="2">第4行第2列</td>
+            <!-- <td>第4行第3列</td> -->
+        </tr>
+
+         <!-- 第5行 -->
+         <tr>
+
+            <td>第5行第1列</td>
+            <!-- <td>第5行第2列</td>
+            <td>第5行第3列</td> -->
+        </tr>
+    </table>
+</body>
+</html>

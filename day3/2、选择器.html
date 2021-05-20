@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        /* 标签选择器 */
+       
+        p{
+            color: tomato;
+        }
+
+
+        /* id选择器  #id名{
+            属性：值；
+        } */
+
+        /* id是唯一的 */
+        #three{
+            color: violet;
+        }
+
+        /* 类选择器 
+            .类名{
+                属性：值；
+            }
+        */
+        .no1{
+            color: yellowgreen;
+            
+        }
+
+        h1{
+            color: turquoise;
+        }
+        /* 选择器的优先级
+        选择范围越小 优先级越高
+            id最高>类选择器>标签选择器
+        */
+
+    </style>
+</head>
+<body>
+
+    <!-- 选择器  选择  找到我们想要设置样式的标签 内容 -->
+    <!-- 标签选择器 -->
+
+    <h1 class="no1">我是第一个h1</h1>
+    <h1 class="no1">我是第2个h1</h1>
+    <h1 id="three">我是第3个h1</h1>
+    <p>我是段落p</p>
+</body>
+</html>

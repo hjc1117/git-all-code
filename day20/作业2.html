@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .a{
+            height: 200px;
+            width: 300px;
+            box-sizing: border-box;
+            padding: 10px;
+            margin: 150px auto;
+            border: 1px solid #000;
+            position: relative;
+            transition:all .3s ease;
+            overflow: hidden;
+        }
+        .a:hover{
+            height: 400px;
+        }
+        hr{
+            background-color: red;
+            height: 2px;
+        }
+        input{
+            height: 30px;
+            text-indent: 1em;
+            width: 270px;
+        }
+        button{
+            height: 30px;
+            width: 70px;
+            position: relative;
+            top: 10px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+        .clear{
+            clear: both;
+        }
+        select{
+            float: left;
+            width: 100px;
+            height: 30px;
+            margin: 10px;
+            position: relative;
+            top: 10px;
+            left: 25%;
+            transform: translate(-50%);
+            opacity: 0%;
+            transition:all .5s ease-in-out;
+        }
+        .a:hover select{
+            opacity: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <h1>高级搜索</h1>
+        <hr>
+        <input type="text" placeholder="请输入关键字">
+        <button>搜索</button>
+        <div class="clear"></div>
+        <select>
+            <option value="">场合</option>
+        </select>
+        <select>
+            <option value="">性别</option>
+        </select>
+        <select>
+            <option value="">风格</option>
+        </select>
+        <select>
+            <option value="">色系</option>
+        </select>
+        <select>
+            <option value="">价格</option>
+        </select>
+        <select>
+            <option value="">年龄</option>
+        </select>
+        <select>
+            <option value="">季节</option>
+        </select>
+    </div>
+</body>
+</html>

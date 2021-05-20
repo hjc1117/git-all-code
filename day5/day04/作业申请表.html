@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #zp{
+            background-color: rgb(240, 240, 240);
+            border: turquoise;
+        }
+    </style>
+</head>
+<body>
+    <h3>申请表</h3>
+    <p> 姓名:<input type="text" > </p>
+    <p> 密码:<input type="text" > </p>
+    <p> 照片:<input type="file" id="zp" readonly> <button>浏览...</button> </p>
+    <p> 感兴趣的职位:<input type="radio"  name="change" id="job1" > <label for="job1">web设计</label>  <input type="radio" name="change" id="job2"> <label for="job2">web开发</label> </p>
+    <p> 向往的城市: <select name="" id=""> <option value="">---请选择---</option>  <option value="">---郑州---</option> <option value="">---日本---</option> </select> 
+    </p>
+    <p> 协议: <br> <textarea name="" id="k" cols="30" rows="10" placeholder="求职信息必须真实，准确。 本网站只负责向企业推荐。 " ></textarea> </p>
+    <p> <input type="checkbox" name="" id=""> 我认真阅读并接受以上协议。 </p>
+    <p> 经验: <select name="" id=""> <option value="">---请选择---</option>  <option value="">---一年---</option> <option value="">---两年---</option> </select> 
+    </p>
+    <button disabled >提交</button> <button>重置</button>
+</body>
+</html>

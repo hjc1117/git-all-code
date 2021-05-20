@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            width: 150px;
+            height: 40px;
+            background-color: greenyellow;
+            /* 从块级元素  转为行内块 */
+            display: inline-block;
+        }
+
+        span {
+            width: 100px;
+            height: 40px;
+            background-color: indianred;
+            /* display: inline-block; */
+            /* 转为块级元素 */
+            display: block;
+        }
+
+        img{
+            display: block;
+        }
+
+        div{
+            width: 100px;   
+            height: 100px;
+            background-color: rgb(168, 82, 82);
+            /* display: inline-block; */
+            /* display: inline; */
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>我是li_1</li>
+        <li>我是li_2</li>
+        <li>我是li_3</li>
+        <li>我是li_4</li>
+    </ul>
+
+
+
+    <span>我是span</span>
+    <span>我是span_2</span>
+
+    <img src="./img/images/百度导航_01.jpg" alt="">
+    <img src="./img/images/百度导航_01.jpg" alt="">
+
+    <div>哈哈哈我是div_1</div>
+    <div>哈哈哈我是div_2</div>
+</body>
+
+</html>

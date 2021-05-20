@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .a{
+            height: 500px;
+            width: 500px;
+            background-color: aqua;
+            text-align: center;
+            line-height: 500px;position: absolute;
+            left: 785px;
+            top: 580px;
+            transform: rotate(-30deg);
+        }
+        .b{
+            height: 500px;
+            width: 500px;
+            background-color: rgb(17, 0, 255);
+            text-align: center;
+            line-height: 500px;
+            /* border: 1px solid transparent; */
+            transform: rotate(30deg);
+            position: absolute;
+            left: 194px;
+            top: 600px;
+        }
+        .c{
+            height: 500px;
+            width: 500px;
+            background-color: rgb(255, 0, 0);
+            text-align: center;
+            line-height: 500px;
+            transform: rotate(45deg);
+            position: absolute;
+            left: 500px;
+            top: 200px;
+        }
+        .a:hover{
+            box-shadow: rgb(0, 234, 255) 0px 0px 400px 600px;
+            background-image:radial-gradient(rgb(0, 255, 255) ,yellow ,rgb(245, 41, 177),rgb(25, 250, 250) ); 
+            border-radius: 250px 250px 250px 250px;
+        }
+        .b:hover{
+            box-shadow: rgb(217, 255, 0) 0px 0px 400px 600px;
+            background-image:radial-gradient(rgb(0, 255, 255) ,yellow ,rgb(245, 41, 177),rgb(25, 250, 250) ); 
+            border-radius: 250px 250px 250px 250px;
+        }
+        .c:hover{
+            box-shadow: rgb(255, 30, 0) 0px 0px 400px 600px;
+            background-image:radial-gradient(rgb(0, 255, 255) ,yellow ,rgb(245, 41, 177),rgb(25, 250, 250) ); 
+            border-radius: 250px 250px 250px 250px;
+        }
+        .box{
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="a">GIAO!</div>
+        <div class="b">GIAO!</div>
+        <div class="c">giao!</div>
+    </div>
+</body>
+</html>

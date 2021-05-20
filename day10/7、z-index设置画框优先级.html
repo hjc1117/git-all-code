@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z-index 设置文字优先级</title>
+    <style>
+        .img{
+            width: 330px;
+            height: 120px;
+            border: 2px solid #999;
+            overflow: hidden;
+            padding: 10px;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .text {
+            list-style: none;
+            color: rgb(32, 32, 32);
+            position: absolute ;
+            top: 50px;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="img">
+        <img src="./img/maple.jpg" alt="">
+    </div>
+
+    <ul class="text">
+        <li>故都的秋</li>
+        <li>郁达夫</li>
+        <li>秋天,无论在什么地方的秋天</li>
+        <li>总是好的;可是啊,北国的秋,却特别地来得清</li>
+    </ul>
+</body>
+</html>

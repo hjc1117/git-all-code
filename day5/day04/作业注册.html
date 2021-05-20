@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width: 800px;
+            margin:  auto;
+            border: 10px solid rgb(#3628f3) ;
+            height: 900px;
+        }
+        .top{
+            height: 20px;
+            line-height: 20px;
+            background-color: rgb(247, 247, 247);           
+        }
+        .zuobian{
+            text-align: right;
+            width: 240px;
+        }
+        input{
+            width: 280px;
+            height: 40px;
+            border: 1px solid rgb(231, 192, 192); 
+        }
+        #xk{
+            width: 15px;
+            height: 15px;
+        }
+        select{
+            width: 80px;
+            height: 40px;
+        }
+        span{
+            color: red;
+        }
+        #use{
+            background: url(./img/one4.jpg) no-repeat 250px 13px ;
+        }
+        .mm{
+            background: url(./img/one5.jpg) no-repeat 250px 13px;
+        }
+        button{
+            width: 280px;
+            height: 40px;
+            background-color: red;
+            color: white;
+            border: 1px solid rgb(184, 164, 164);
+        }
+    </style>
+</head>
+<body>
+    <table cellspacing="0" cellpadding="10" >
+        <tr class="top">
+            <td >
+                账户信息
+            </td>
+            <td>               
+            </td>
+        </tr>
+        <tr >
+            <td class="zuobian" >
+                <span>*</span> 用户名
+            </td>
+            <td class="youbian">
+                <input type="text" id="use">
+            </td>
+        </tr>
+        <tr>
+            <td class="zuobian" >
+                <span>*</span> 请设置密码
+            </td>
+            <td class="youbian" >
+                <input type="password" class="mm">
+            </td>
+        </tr>
+        <tr>
+            <td  class="zuobian">  
+                <span>*</span> 请确认密码
+            </td>
+            <td class="youbian">
+                <input type="password" class="mm">
+            </td>
+        </tr>
+        <tr class="top">
+            <td>
+                联系人信息
+            </td>
+            <td class="youbian">
+                
+            </td>
+        </tr>
+        <tr >
+            <td class="zuobian">
+                <span>*</span> 联系人姓名
+            </td>
+            <td class="youbian">
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td class="zuobian">
+                <span>*</span> 所在部门
+            </td>
+            <td class="youbian">
+                <select name="" id="">
+                    <option value="">请选择</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td class="zuobian"> 
+                <span>*</span> 固定电话
+            </td>
+            <td class="youbian">
+                <input type="text" name="" id="">
+            </td>
+        </tr>
+        <tr class="top">
+            <td>
+                公司信息
+            </td>
+            <td class="youbian">                
+            </td>
+        </tr>
+        <tr >
+            <td class="zuobian">
+                <span>*</span> 公司名称
+            </td>
+            <td class="youbian">
+                <input type="text">
+            </td>
+        </tr>
+        <tr>
+            <td class="zuobian">
+                <span>*</span> 购买类型
+            </td>
+            <td class="youbian" >
+                <input type="checkbox" name="" id="xk">it设备 
+                <input type="checkbox" name="" id="xk">通讯数码
+                <input type="checkbox" name="" id="xk">办公用品耗材
+                <input type="checkbox" name="" id="xk">大家电
+                <input type="checkbox" name="" id="xk">政府项目
+                <input type="checkbox" name="" id="xk">礼品
+            </td>
+        </tr>
+        <tr>
+            <td>              
+            </td>
+            <td class="youbian">
+                <button>立即注册</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

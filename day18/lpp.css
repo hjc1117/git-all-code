@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* 加上透视 
+    结合后面用translateZ产生3d效果*/
+    perspective: 800px;
+}
+article{
+    width: 200px;
+    height: 260px;
+    position: relative;
+    margin: 350px auto;
+    transform-style: preserve-3d;/*让子元素也附有3d属性*/
+    animation: move 10s ease-in-out infinite alternate forwards;
+}
+div{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    background: url(./img/lpp/7.JPG) no-repeat;
+    background-size: cover;
+    transition:2s;
+}
+@keyframes move{
+    0%{
+        transform: rotateX(0) rotateY(0);
+    }
+    100%{
+        transform: rotateY(540deg) rotateX(0deg) rotateZ(0deg);
+    }
+}
+/* 前 */
+div:nth-of-type(1){
+    transform: rotateY(0) translateZ(75px);
+}
+/* 右 */
+div:nth-of-type(2){
+    transform: rotateY(90deg) translateZ(75px);
+}
+/* 后 */
+div:nth-of-type(3){
+    transform: rotateY(180deg) translateZ(75px);
+}
+/* 左 */
+div:nth-of-type(4){
+    transform: rotateY(270deg) translateZ(75px);
+}
+/* 俯视面 */
+div:nth-of-type(5){
+    transform: translate3d(0,50%,0) rotateX(-90deg);
+    /* transform: rotateY(360deg) translateZ(75px); */
+}
+/* 仰视面 */
+div:nth-of-type(6){
+    transform: translate3d(0,-50%,0) rotateX(90deg);
+    /* transform: rotateY(90deg) translateZ(75px); */
+}
+div:nth-of-type(7){
+    transform: rotateY(0) translateZ(150px) scale(2,2);
+    opacity: 10%;
+}
+/* 右 */
+div:nth-of-type(8){
+    transform: rotateY(90deg) translateZ(150px) scale(2,2);
+    opacity: 10%;
+
+}
+/* 后 */
+div:nth-of-type(9){
+    transform: rotateY(180deg) translateZ(150px) scale(2,2);
+    opacity: 10%;
+
+}
+/* 左 */
+div:nth-of-type(10){
+    transform: rotateY(270deg) translateZ(150px) scale(2,2);
+    opacity: 10%;
+
+}
+/* 俯视面 */
+div:nth-of-type(11){
+    transform: translate3d(0,100%,0) rotateX(-90deg) scale(2,2);
+    opacity: 10%;
+
+}
+/* 仰视面 */
+div:nth-of-type(12){
+    transform: translate3d(0,-100%,0) rotateX(90deg) scale(2,2);
+    opacity: 10%;
+}
+article:hover div:nth-of-type(7){
+    background: url(./img/lpp/1.JPG) no-repeat;
+    transform: translateZ(225px) scale3d(2,2,2);
+}
+article:hover div:nth-of-type(8){
+    background: url(./img/lpp/2.JPG) no-repeat;
+    transform: rotateY(90deg) translateZ(225px) scale3d(2,2,2);
+}
+article:hover div:nth-of-type(9){
+    background: url(./img/lpp/3.JPG) no-repeat;
+    transform: rotateY(180deg) translateZ(225px) scale3d(2,2,2);
+}
+article:hover div:nth-of-type(10){
+    background: url(./img/lpp/4.JPG) no-repeat;
+    transform: rotateY(270deg) translateZ(225px) scale3d(2,2,2);    
+}
+article:hover div:nth-of-type(11){
+    background: url(./img/lpp/5.JPG) no-repeat;
+    transform: translate3d(0,150%,0) rotateX(-90deg) scale3d(2,2,2);
+}
+article:hover div:nth-of-type(12){
+    background: url(./img/lpp/6.JPG) no-repeat;
+    transform: translate3d(0,-150%,0) rotateX(90deg) scale3d(2,2,2);
+}
+article:hover div{
+    background-size: cover !important;
+    /* transform: translateZ(120deg) translateX(120deg) translateY(90deg) scale3d(3,3,3); */
+    border: none;
+    opacity: 90%;
+    transition: all 2s linear;
+}

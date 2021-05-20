@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            height: 200px;
+            background-color: aqua;
+        }
+        nav{
+            height: 200px;
+            background-color: bisque;
+        }
+        main{
+            width: 100%;
+            background-color: blueviolet;
+            height: 900px;
+        }
+        article{
+            width: 600px;
+            height: 600px;
+            background-color: cornflowerblue;
+            float: left;
+        }
+        aside{
+            width: 200px;
+            height: 600px;
+            background-color: crimson;
+            float: left;
+        }
+        footer{
+            height: 200px;
+            background-color: darkorange;
+        }
+        header,nav,main,footer{
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <header tabindex="2">我是头</header>
+    <nav tabindex="1">我是连接组</nav>
+    <main>
+        <aside tabindex="3" contenteditable="flase">aside侧边栏</aside>
+        <article tabindex="4">article</article>
+        
+    </main>
+    <footer>jio</footer>
+
+    
+</body>
+</html>

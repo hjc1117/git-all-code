@@ -1,0 +1,403 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.top{
+    overflow: hidden;
+}
+#head{
+    height: 120px;
+    position: relative;
+    right: 330px;
+}
+.top1{
+    background-color: rgb(51,51,51);
+    height: 40px;
+    margin-top: -4px;
+}
+ul{
+    list-style: none;
+    color: white;
+}
+li{
+    float: left;
+    line-height: 40px;
+    font-size: 12px;
+    margin: 0 2px;
+}
+.ul1{
+    width: 750px;
+    position: relative;
+    top: 0px;
+    left: 330px;
+}
+.ul2{
+    float: right;
+    position: relative;
+    top: 0;
+    right: 360px;
+}
+#i{
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.shop{
+    background-color: rgb(66, 66, 66);
+    height: 40px;
+    box-sizing: border-box;
+    
+}
+.shop p{
+    float:right;
+    line-height: 40px;
+    margin-left: 20px;
+    width: 80px;
+}
+#shop{
+    position: relative;
+    top: 3px;
+    left: 5px;
+}
+.top2{
+    height: 100px;
+    width: 70%;
+    margin: 0 auto;
+    background: url(./小米img/logo-footer.png) no-repeat 40px 15px;
+}
+.top2 ul{
+    color: black;
+    position: relative;
+    left: 200px;
+    
+}
+.top2 li{
+    font-size: 18px;
+    line-height: 100px;
+    margin-right: 17px;
+}
+.input{
+    float: right;
+    height: 40px;
+    border: 1px solid #000;
+    position: relative;
+    top: 30px;
+    right: 195px;
+}
+input{
+    height: 40px;
+    width: 150px;
+    border: none;
+}
+.tijiao{
+    float: right;
+    border-left: 1px solid #000;
+    height: 40px;
+}
+#tijiao{
+    height: 40px;
+}
+.box1{
+    width: 1225px;
+    height: 460px;
+    margin: 0 auto;
+    background: url(./小米img/背景.jpg) no-repeat;
+    color: white;
+    border: 1px solid rgb(49, 53, 98);
+}
+table{
+    border: none;
+    background-color: rgb(69, 80, 87);
+    position: relative;
+    top: -1px;
+}
+tr{
+    height: 44px;  
+}
+td{  
+    text-align: left;
+    text-indent: 2em;
+    width: 230px;
+    background: url(./小米img/jian.png) no-repeat 193px 8px;
+}
+/* 第二大框 */
+.box2{
+    width: 1225px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.box2a{
+    float: left;
+    margin-left: 10px;
+}
+.clear{
+    clear: both;
+}
+/* 下面框的背景 */
+.big{
+    width: 100%;
+    background-color: rgb(245, 245, 245);
+    margin-top: 20px;
+}
+/* 第三大框 */
+.box3{
+    width: 1250px;
+    margin: 0 auto;
+}
+.box3top{
+    height: 40px;
+    width: 1200px;
+}
+.box3top1{
+    float: right;
+    border: 1px solid #000;
+    margin-right: 10px;
+    height: 29px;
+}
+.box3top2{
+    float: right;
+    border: 1px solid #000;
+    height: 29px;
+}
+.box3mid{  
+    margin-top: 10px;
+}
+.box3mid img{
+    margin-left: 3px;
+}
+.box3under{
+    margin-top: 10px;
+}
+/* 第四大框 */
+.box4{
+    width: 1250px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.box4top{
+    height: 40px;
+    width: 1200px;
+}
+.box4top1{
+    float: right;
+    border: 1px solid #000;
+    
+    height: 29px;
+}
+.box4top2{
+    float: right;
+    border: 1px solid #000;
+    margin-right: 10px;
+    height: 29px;
+}
+.box4mid{
+    margin-top: 10px;
+    width: 1300px;
+}
+.box4mid img{
+    margin: 2px;
+}
+.b1{
+    float:right;
+    position: relative;
+    top: 0;
+    right: 92px;
+}
+.b1 img{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.box4under{
+    margin-top: 10px;
+}
+/* 第五大框 */
+.box{
+    width: 1250px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.boxtop{
+    height: 40px;
+    width: 1200px;
+}
+h5{
+    float: right;
+}
+.boxmid{
+    margin-top: 10px;
+    width: 1300px;
+}
+.boxmid img{
+    margin: 2px;
+}
+.b{
+    float:right;
+    position: relative;
+    top: 0;
+    right: 92px;
+}
+.b img{
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.boxunder{
+    margin-top: 10px;
+}
+
+/* 底部上框 */
+
+.boxudt{ 
+    width: 1300px;
+    height: 40px;
+    margin: 0 auto;
+}
+.a{
+    margin: 30px auto;
+}
+.a li{
+    color: black;
+    font-size: 18px;
+    font-weight: 300;
+}
+.i{
+    width: 1px;
+    height: 20px;
+    margin-top: 10px;
+    background-color: black;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.a img{
+    position: relative;
+    top: 5px;
+    left: 0;
+}
+a{
+    text-decoration: none;
+    color: rgb(44, 184, 189);
+}
+.hr{
+    width: 65%;
+    clear: both;
+    background-color: black;
+    height: 1px;
+    margin: 30px auto;
+}
+.unmid{
+    width: 1300px;
+    margin: 0 auto;
+}
+.l{
+    float: left;
+    margin: 0 40px 0 40px;
+}
+.l ul{
+    float: left;
+    margin: 10px;
+}
+.l ul li{
+    clear: both;
+    display: block;
+    color: rgb(88, 83, 83);
+}
+.r{
+    float: right;
+    height: 125px;
+    text-align: center;
+    border-left: 1px solid #000;
+    padding-left: 20px;
+}
+.p1{
+    color: red;
+}
+.ud{
+    height: 400px;
+    background-color: rgb(245, 245, 245);
+}
+.under{
+    width: 1300px;
+    margin: 0 auto;
+}
+.under img{
+    position: relative;
+    top: 60px;
+    left: -60px;
+}
+.udbox{
+    width: 1030px;
+    height: 120px;
+}
+.l1{
+    width: 1130px;
+    height: 30px;
+    margin: 0 auto;
+}
+.l2{
+    line-height: 30px;
+    color: black;
+    margin: 0 10px;
+}
+.i1{
+    width: 1px;
+    height: 10px;
+    margin-top: 10px;
+    background-color: black;
+}
+#ll2{
+    color: red;
+}
+.k p{
+    font-size: 10px;
+    color: rgb(179, 178, 178);
+}
+.z{
+    width: 1050px;
+    margin: 0 auto;
+    position: relative;
+    top: -60px;
+    left: 60px;
+    height: 300px;
+}
+.z p{
+    display: block;
+    font-family: 楷体;
+    color: rgb(94, 98, 94);
+    text-align: center;
+    position: relative;
+    top: 160px;
+    font-size: 24px;
+}
+td:hover,li:hover{
+    color: red;
+    cursor: pointer;
+}
+.s1{
+    position: fixed;
+    top: 300px;
+    right: 20px;
+}
+.s{
+    display: block;
+    border-bottom: 1px solid rgb(245, 245, 245);
+    box-sizing: border-box;
+    padding: 10px;
+    width: 85px;
+    height: 90px;
+    margin-bottom: 1px;
+    background-color: white;
+}
+.s p{
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+.s img{
+    position: relative;
+    top: 5px;
+    left: 15px;
+}
+

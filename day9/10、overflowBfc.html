@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow触发BFC机制</title>
+
+    <style>
+        .out{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(216, 82, 82);
+            /* border: 1px solid black; */
+            overflow: hidden;
+        }
+
+        /* 
+            边框重合了
+            overflow: hidden;
+
+            触发一个BFC机制：
+            1、格式化元素
+            2、各元素有自己的位置  互不干扰
+            3、各个元素独立 方便统一调整
+
+
+
+            常用触发bfc机制的条件：
+            overflow:  值不是none
+            float:值不是none的时候
+            根元素
+
+         */
+        .in{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(115, 238, 15);
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="out">
+        <div class="in"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 1px solid #000;
+            width: 620px;   
+        }
+        .top{
+            width: 600px;
+            padding: 10px;
+            border-bottom: 1px solid #000;
+        }
+        
+        .i{
+            height: 20px;
+            margin-top: 17px;
+            width: 5px;
+            background-color: blue;
+            float: left;
+            margin-right: 10px;
+        }
+        
+        tr td:nth-child(1){
+            float: right;
+        }
+        /* tr td:nth-child(2){
+            width: 90px;
+        } */
+        tr td:nth-child(3){
+            color: cornflowerblue;
+            font-size: 14px;
+        }
+        td{
+            height: 50px;
+            line-height: 50px;
+            border: none;
+        }
+        input{
+            height: 25px;
+            width: 290px;
+            border: 2px solid red;
+            outline: none;
+            text-indent: 1em;
+        }
+        table tr:last-child td:last-child input{
+            border: 2px solid rgb(24, 143, 0);
+        }
+        .submit{
+            width: 155px;
+            height: 40px;
+            text-align: center;
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            text-indent: 0px;
+            background-color: rgb(174, 3, 15);
+            border: none;
+            margin: 40px 0 10px 78px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+    <div class="top">
+        <div class="i"></div>
+        <p>注册账号</p>
+    </div>
+    <form action="">
+    <table cellspacing=0>
+        <tr>
+            <td><span>*</span>昵称:</td>
+            <td><input type="text" minlength="6" maxlength="10" required placeholder="英文、数字长度为6-10个字符"></td>
+        </tr>
+        <tr>
+            <td><span>*</span>密码:</td>
+            <td><input type="password" minlength="6" maxlength="16" required placeholder="长度为6-16个字符"></td>
+        </tr>
+        <tr>
+            <td><span>*</span>手机密码:</td>
+            <td><input type="number" maxlength="11" required placeholder="以13|14|15|17|18开头"></td>
+            <td>忘记密码时可用手机号码找回</td>
+        </tr>
+        <tr>
+            <td><span>*</span>邮箱:</td>
+            <td><input type="email"></td>
+        </tr>
+        <tr>
+            <td><span>*</span>年龄:</td>
+            <td><input type="number"></td>
+        </tr>
+    </table>
+    <input type="submit" value="立即注册" class="submit">
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外边距</title>
+
+    <style>
+        .a{
+            width: 400px;
+            height: 300px;
+            border: 1px solid black;
+            /* margin-top: 100px;
+            margin-left: 100px;
+            margin-right: 100px; */
+
+            /*  margin  给两个值的时候 第一个值  y轴  第二个轴 x轴 */
+            /* margin: 10px -100px; */
+            margin: 50px auto;
+        }
+        .b{
+            width: 300px;
+            height: 200px;
+            border: 1px solid red ;
+            /* margin-top: 50px;
+            margin-left: 30px; */
+            /* margin: 30px  auto; */
+
+            /* margin 给四个值 上 右  下  左  从上面开始 顺时针*/
+            margin: 100px  30px  40px  100px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <div class="b"></div>
+    </div>
+</body>
+</html>

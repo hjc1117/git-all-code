@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度一下</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .top{
+            height: 40px;
+            border-bottom: 1.5px solid rgb(200, 194, 194);
+        }
+        ul{
+            width: 100%;
+            list-style: none;
+            height: 20px;
+            line-height: 20px;
+            font-size: 0px;
+            margin-left: 15px;
+        }
+        li{
+            margin: 10px 10px;
+            display: inline-block;
+            text-align: center;
+            font-size: 17px;
+        }
+        #xinwen{
+            padding-left: 25px;
+        }
+        .topr{
+            display: inline-block;
+            padding-left: 1080px;
+        }
+        #liang{
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            border-radius: 5px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            font-size: 16px;
+        }
+        li:hover{
+            color: red;
+            cursor: pointer;
+        }
+        #liang:hover{
+            cursor: pointer;
+        }
+        .zhong{
+            display: block;
+            width: 1080px;
+            margin: 60px auto;
+        }
+        #baidu{
+            display: inline-block;
+            margin: 60px 380px;
+        }
+        #baidu:hover{
+            cursor: pointer;
+        }
+        input{
+            display: inline-block;
+            height: 40px;
+            width: 540px;
+            margin-left: 200px;
+            border-radius: 6px 0px 0px 6px ;
+            border: 1px solid #000;
+            background: url(./img/camera.png) no-repeat 505px 8px;
+        }
+        #anniu{
+            position:absolute;
+            height: 44px;
+            width: 100px;
+            background-color: blue;
+            display: inline-block;
+            line-height: 44px;
+            text-align: center;
+            color: white;
+            margin-left: -20px;
+            top: 327px;
+            border-radius: 0px 6px 6px 0px;
+        }
+        .xiazuo{
+            height: 600px;
+            width: 1080px;
+            margin-top: 500px;
+        }
+        .shang{
+            width: 80%;
+            margin-top: -150px;
+            margin-left: 350px;
+        }
+        .q{
+            height: 30px;
+            text-align: center;
+            width: 80px;
+            font-size: 13px;
+            color: rgb(184, 173, 173);
+        }
+        #tuijian{
+            width: 40px;
+            border-bottom: 2px solid rgb(31, 34, 224);
+            color: black;
+            font-weight: 600;
+            padding-bottom: -10px;
+        }
+        .tupian{
+            height: 450px;
+            width: 1080px;
+            margin-top: 35px;
+            margin-left: 370px;
+        }
+        h3{
+            display: inline-block;
+            width: 250px;
+        }
+        #xiaozi{
+            font-size: 3px;
+            font-weight: 200;
+        }
+        h3:hover{
+            color: rgb(189, 221, 82);
+            cursor: pointer;
+        }
+        #redian{
+            color: red;
+        }
+        .tupian2{
+            margin-top: 20px;
+        }
+        .rebang{
+            width: 450px;
+            margin-left: 650px;
+            margin-top: -350px;
+        }
+        table{
+            width: 390px;
+            height: 395px;
+        }
+        #re{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            background-color: rgb(245, 170, 50);
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            font-size: 16px;
+        }
+        #xin{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 5px;
+            background-color: rgb(238, 29, 29);
+            color: white;
+            text-align: center;
+            line-height: 20px;
+            font-size: 16px;
+        }
+        .zuo{
+            text-align: left;
+        }
+        .you{
+            width: 65px;
+            text-align: right;
+            font-size: 14px;
+            color: rgb(131, 123, 123);
+        }
+        .you:hover{
+            cursor: pointer;
+        }
+        .zuo:hover{
+            color: red;
+            cursor: pointer;
+        }
+        #change{
+            background: url(./change.png) no-repeat 0px 9px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            color: red;
+        }
+        .number{
+            color: rgb(156, 28, 28);
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <ul>
+            <li id="xinwen">新闻</li>
+            <li>hao123</li>
+            <li>地图</li>
+            <li>直播</li>
+            <li>视频</li>
+            <li>贴吧</li>
+            <li>学术</li>
+            <li>更多</li>
+        <div class="topr">
+            <li>郑州 10°</li> <span id="liang">良</span>
+            <li>设置</li>
+            <li>小丑小丑小丑</li>
+        </div>
+        </ul>
+        <div class="zhong">
+            <ul class="shurukuang">
+                <li><img src="./baidu.png" alt="" id="baidu"></li>
+                <li class="kuang"><input type="text" name="" id=""> </li>
+                    <li><span id="anniu">百度一下</span></li>
+            </ul>
+        </div>
+        <div class="xiazuo">
+            <ul class="shang">
+                <li class="q">我的关注</li>
+                <li class="q" id="tuijian">推荐</li>
+                <li class="q">导航</li>
+            </ul>
+            <div class="tupian">
+                
+                <img src="./图片1.png" alt="">
+                <h3> <a href="./跳转.html" target="blank">李克强总理将出席记者会</a> 
+                    <br><br><br><br><br>
+                    <p id="xiaozi"> <span id="redian">热点</span> 海外网 03-09 14:47</p>
+                </h3>
+            <div class="tupian2">
+                <img src="./TAB72{@Y$X_PN@F3ZWG@[46.png" alt="">
+                <span id="zi"></span>
+                <h3>建议推行免费婚检降低出生缺陷人口比例关于婚检，你需要知道这些
+                    <br><br><br>
+                    <p id="xiaozi">潇湘晨报 03-10 10:54</p>
+                </h3>
+                
+                <div class="rebang">
+                    <table>
+                        <tr>
+                            <td class="zuo">百度热榜</td>
+                            <td class="you" id="change">换一换</td>
+                        </tr>
+                        <tr>
+                            <td class="zuo"> <span class="number">1</span> 建议鼓励城市离退休人员告老还乡 <span id="re">热</span></td> 
+                            <td class="you">485万</td>
+                        </tr>
+                        <tr>
+                            <td class="zuo"> <span class="number">2</span> 代表建议整顿无底线追星行为 <span id="xin">新</span></td> 
+                            <td class="you">468万</td>
+                        </tr>
+                        <tr>
+                            <td class="zuo"> <span class="number">3</span> 31省区市本土零新增</td> 
+                            <td class="you">452万</td>
+                        </tr>
+                        <tr>
+                            <td class="zuo"> <span class="number">4</span> 建议降低老赖入刑门槛代表</td> 
+                            <td class="you">436万</td>
+                        </tr>
+                        <tr>
+                            <td class="zuo"> <span class="number">5</span> 建议推行免费婚检</td> 
+                            <td class="you">421万</td>
+                        </tr>
+                        <tr>
+                            <td class="zuo"> <span class="number">6</span> 建议立法解决商品过度包装问题</td> 
+                            <td class="you">406万</td>
+                        </tr>
+                        <tr>
+                            <td class="zuo"> <span class="number">7</span> 建议保障农村出嫁女性土地权益</td> 
+                            <td class="you">392万</td>
+                        </tr>
+                        <tr>
+                            <td class="zuo"> <span class="number">8</span> 代表的河南话版中国加油顺口溜火了</td> 
+                            <td class="you">378万</td>
+                        </tr>
+                        <tr>
+                            <td class="zuo"> <span class="number">9</span> 建议明确中学性教育课时安排</td> 
+                            <td class="you">365万</td>
+                        </tr>
+                        <tr>
+                            <td class="zuo"> <span class="number">10</span>建议清理不合理电子眼</td> 
+                            <td class="you">352万</td>
+                        </tr>
+                        
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

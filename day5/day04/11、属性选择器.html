@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+
+    <style>
+        /* [属性名]  只要有该属性的标签 全部选中
+        [href]{
+            color: red;
+        } */
+
+
+        /* [属性名 = '值']  只要有该属性的值完全相等 才被选中 */
+        /* [href='aqiyi.com']{
+            color: yellow   ;
+        } */
+
+        /* [href^='a']{
+            color: red;
+        } */
+
+        /* 以引号内结束 */
+        /* [href $='m']{
+            color: red;
+        } */
+
+        /* 包含 */
+        [href *='o']{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p><a href="http://www.baidu.com">百度</a></p>
+    <p><a href="www.google.cn">谷歌</a></p>
+    <p><a href="aqiyi.com">爱奇艺</a></p>
+</body>
+</html>

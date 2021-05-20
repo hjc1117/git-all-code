@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .top{
+            width: 90%;
+            height: 30px;
+            background: url(./img/logo.gif) no-repeat 20px 0px;
+            background-color: rgb(237, 237, 235);
+        }
+        .ul1{
+            list-style: none;
+            width: 70%;
+            margin: 0px auto;
+        }
+        li{
+            margin: 0px 10px;
+        }
+        .li1{
+            float: left;
+            line-height: 30px;
+        }
+        .k{
+            float: left;
+            border: 1px solid rgb(195, 195, 195);
+            height: 20px;
+            margin-top: 5px;
+        }
+        .k1{
+            position: absolute;
+            top: 10px;
+        }
+        .box{
+            height: 300px;
+            width: 350px;
+            border: 1px solid #000;
+            position: absolute;
+            top: 30px;
+            left: 475px;
+            padding: 10px;
+        }
+        .box>ul{
+            list-style: none;
+            margin: 20px ;
+            width: 90%;
+            margin-top: 15px;
+        }
+        .li2{
+            float: left;
+            margin: 10px 15px;
+        }
+        hr{ 
+            /* clear: both; */
+            /* height: 1px; */
+            border-top: 1px solid rgb(172, 160, 160);
+            width: 350px;
+            position: relative;
+            top: 10px;
+        }
+        li:hover{
+            color: red;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <ul class="ul1">
+            <li class="li1">购物车</li>
+            <li class="k"></li>
+            <li class="li1">优惠券</li>
+            <li class="k"></li>
+            <li class="li1">快速注卡</li>
+            <li class="k"></li>
+            <li class="li1">各地购课</li>
+            <li class="k"></li>
+            <li class="li1">手机报</li>
+            <li class="k"></li>
+            <li class="li1">网站导航</li>
+            <li > <img src="./img/open_icon.gif" alt="" class="k1"> </li>
+        </ul>
+    </div>
+    <div class="box">
+        <ul>
+            <li class="li2">托福</li>
+            <li class="li2">雅思</li>
+            <li class="li2">考研</li>
+            <li class="li2">职称英语</li>
+            <li class="li2">初中</li>
+            <li class="li2">日语</li>
+        </ul>
+        <!-- <div class="l"></div>  -->
+         <hr>
+        <ul>
+            <li class="li2">网络课堂</li>
+            <li class="li2">资讯中心</li>
+            <li class="li2">知识堂</li>
+            <li class="li2">大师讲坛</li>
+            <li class="li2">学习论坛</li>
+            <li class="li2">学词</li>
+            <li class="li2">考研搜校</li>
+        </ul>
+        <!-- <div class="l"></div>  -->
+        <hr>
+        <ul>
+            <li class="li2">M-Zone</li>
+            <li class="li2">手机报</li>
+            <li class="li2">时时英语</li>
+        </ul>
+    </div>
+</body>
+</html>

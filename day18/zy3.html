@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .a{
+            width: 80%;
+            height: 100%;
+            margin: 50px auto;
+        }
+        li{
+            list-style: none;
+            float: left;
+            border: 1px solid rgb(141, 139, 139);
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px 10px;
+        }
+        @keyframes w{
+            0%{
+                transform: rotate(20deg);
+            }
+            100%{
+                transform: rotate(-20deg);
+            }
+        }
+        @keyframes q{
+            0%{
+                transform: rotate(-20deg);
+            }
+            100%{
+                transform: rotate(20deg);
+            }
+        }
+        img{
+            width: 250px;
+            height: 250px;
+        }
+        ul li:nth-child(odd){
+            transform: rotate(10deg);
+            animation: w 1s linear infinite alternate;
+        }
+        ul li:nth-child(even){
+            transform: rotate(-10deg);
+            animation: q 1s linear infinite alternate;
+        }
+        ul>li:hover{
+            transform: scale(1.2,1.2);
+            transform: rotate(0deg);
+            transition: all 0.3s linear; 
+           animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <ul>
+            <li><img src="./img/美图1.lnk" alt=""></li>
+            <li><img src="./img/美图2.lnk" alt=""></li>
+            <li><img src="./img/美图3.lnk" alt=""></li>
+            <li><img src="./img/美图4.jpg" alt=""></li>
+            <li><img src="./img/美图5.lnk" alt=""></li>
+            <li><img src="./img/美图6.lnk" alt=""></li>
+            <li><img src="./img/美图8.lnk" alt=""></li>
+            <li><img src="./img/美图7.lnk" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>

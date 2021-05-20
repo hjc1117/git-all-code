@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>旅行</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box{
+            width: 99.9%;
+            height: 1080px;
+        }
+        .picture{
+            background: url(./img/宇宙.jpg);
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            margin-top: -20px;
+        }
+        .artcal{
+            width: 70%;
+            margin: 20px auto;
+        }
+        h1,p{
+            color: rgb(255, 255, 255);
+            text-indent: 2em;
+        }
+        h1{
+            font-size: 46px;
+            text-align: center;
+        }
+        p{
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: 26px;
+        }
+        /* .artcal p:nth-of-type(4){
+            color: rgb(208, 255, 0);
+        }
+        .artcal p:nth-of-type(4) span{
+            color: rgb(91, 107, 0);
+        } */
+        .a img,.b img,.c img,.d img{
+            width: 200px;
+            height: 100px;
+        }
+        .a,.b,.c,.d{
+            float: left;
+            position: relative;
+            top: 30px;
+            left: 300px;
+            text-align: center;
+            margin-right: 80px;
+        }
+        .a a,.b a,.c a,.d a{
+            float: left;
+        }
+        .a p,.b p,.c p,.d p{
+            text-indent: 0em;
+        }
+        .aa,.bb,.cc,.dd{
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            background-color: rgb(87, 212, 250);
+            opacity: .2;
+        }
+        .a a:hover .aa,.b a:hover .bb,.c a:hover .cc,.d a:hover .dd{
+            animation: aa .3s forwards;
+        }
+        @keyframes aa{
+            0%{
+                height: 0px;
+            }
+            100%{
+                height: 100%;
+            }
+        }
+        a .t{
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            top: 0;
+            background-image:linear-gradient(to right, rgb(171, 255, 145), rgb(60, 60, 255));
+            animation: bdt 2s forwards  linear infinite;
+        }
+        a .bt{
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: 0px;
+            background-image:linear-gradient(to left, rgb(124, 245, 253), rgb(60, 60, 255));
+            animation: bdb 2s forwards  linear infinite ;
+        }
+        a .r{
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            background-image:linear-gradient(to bottom, rgb(255, 133, 249), rgb(60, 60, 255));
+            animation: bdr 2s forwards linear infinite;
+        }
+        a .l{
+            width: 2px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            background-image:linear-gradient(to top, rgb(255, 186, 140), rgb(60, 60, 255));
+            animation: bdl 2s forwards linear infinite;
+        }
+@keyframes bdt{
+            0%{
+                left: 0;
+                width: 0%;
+            }
+            50%{
+                width: 100%;
+            }
+            100%{
+                right: 0;
+                width: 0%;
+            }
+        }
+@keyframes bdb{
+            0%{
+            right: 0;
+            width: 0%;
+        }
+            50%{
+            width: 100%;
+        }
+            100%{
+            left: 0;
+            width: 0%;
+            }
+        }
+@keyframes bdr{
+    0%{
+        top: 0;
+        height: 0%;
+    }
+    50%{
+        height: 100%;
+    }
+    100%{
+        bottom: 0;
+        height: 0%;
+    }
+}
+@keyframes bdl{
+    0%{
+        bottom: 0;
+        height: 0%;
+    }
+    50%{
+        height: 100%;
+    }
+    100%{
+        top: 0;
+        height: 0%;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="picture">
+            <div class="artcal">
+                <h1>宇宙 （所有空间、时间、物质的总称）</h1>
+            <p>宇宙（Universe）在物理意义上被定义为所有的空间和时间（统称为时空）及其内涵，包括各种形式的所有能量，比如电磁辐射、普通物质、暗物质、暗能量等，其中普通物质包括行星、卫星、恒星、星系、星系团和星系间物质等。宇宙还包括影响物质和能量的物理定律，如守恒定律、经典力学、相对论等。</p>
+            <p>大爆炸理论是关于宇宙演化的现代宇宙学描述。根据这一理论的估计，空间和时间在137.99±0.21亿年前的大爆炸后一同出现，随着宇宙膨胀，最初存在的能量和物质变得不那么密集。最初的加速膨胀被称为暴胀时期，之后已知的四个基本力分离。宇宙逐渐冷却并继续膨胀，允许第一个亚原子粒子和简单的原子形成。暗物质逐渐聚集，在引力作用下形成泡沫一样的结构，大尺度纤维状结构和宇宙空洞。巨大的氢氦分子云逐渐被吸引到暗物质最密集的地方，形成了第一批星系、恒星、行星以及所有的一切。空间本身在不断膨胀，因此当前可以看见距离地球465亿光年的天体，因为这些光在138亿年前产生的时候距离地球比当前更近</p>
+            <p>虽然整个宇宙的大小尚不清楚，但可以测量可观测宇宙的大小，估计其直径为930亿光年。在各种多重宇宙论中，一个宇宙是一个尺度更大的多重宇宙的组成部分之一，各个宇宙本身都包括其所有的空间和时间及其物质。</p>
+            <p>随着巡天观测技术水平的逐步提高，人类不断<span>尝试绘制整个宇宙</span>的全貌 。2021年1月14日，国家天文台北京-亚利桑那巡天(BASS)团队和暗能量光谱巡天(DESI)团队联合发布最新<span>巨幅二维宇宙</span>地图。</p>
+            </div>
+        <div class="a">
+            <a href="">
+                
+                <div class="t"></div>
+                <div class="bt"></div>
+                <div class="l"></div>
+                <div class="r"></div>
+                <img src="./img/行星.jpg" alt="行星">
+                <p>行星</p>
+                <div class="aa"></div>
+            </a>
+        </div>
+        <div class="b">
+            <a href="">
+                
+                <div class="t"></div>
+                <div class="bt"></div>
+                <div class="l"></div>
+                <div class="r"></div>
+                <img src="./img/恒星.jpg" alt="恒星">
+                <p>恒星</p>
+                <div class="bb"></div>
+            </a>
+        </div>
+        <div class="c">
+            <a href="">
+                
+                <div class="t"></div>
+                <div class="bt"></div>
+                <div class="l"></div>
+                <div class="r"></div>
+                <img src="./img/手.gif" alt="星系">
+                <p>星系</p>
+                <div class="cc"></div>
+            </a>
+        </div>
+        <div class="d">
+            <a href="">
+                
+                <div class="t"></div>
+                <div class="bt"></div>
+                <div class="l"></div>
+                <div class="r"></div>
+                <img src="./img/宇宙1.jpg" alt="星系团">
+                <p>星系团</p>
+                <div class="dd"></div>
+            </a>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

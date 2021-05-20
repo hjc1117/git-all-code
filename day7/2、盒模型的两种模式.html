@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 
+            盒模型怪异模式的元素的计算方式
+            元素实际占位置大小 设置的大小
+            元素本身的宽 =  设置宽 -  padding宽（左右内边距） -  边框
+            元素本身的高 =  设置高 - padding高 （上下内边距）-  边框
+
+         */
+         
+        .a{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(228, 41, 41);
+            padding: 50px;
+            /* box-sizing: content-box; */
+            /* 怪异模式 */
+            box-sizing: border-box;
+            border: 10px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">哈哈哈哈</div>
+</body>
+</html>
