@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标事件</title>
+    <style>
+        div{
+        
+        border: 1px solid black;
+        background-color: rgb(216, 214, 214);
+        padding: 50px;
+        box-sizing: border-box;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <div></div>
+    </div>
+</body>
+</html>
+
+<script>
+    // 操作第一个div
+    var div_1 = document.getElementsByTagName('div')[0];
+    div_1.onclick = function(){
+        div_1.style.height = '300px';
+        div_1.style.backgroundColor = 'red';
+    }
+
+    div_1.ondblclick = function(){
+        this.style.height = '200px';
+        this.style.backgroundColor = 'yellow'; 
+        // div_1.style.height = '200px';
+        // div_1.style.backgroundColor = 'yellow'; 
+    }
+
+    // 当鼠标移入的时候
+    div_1.onmouseover = function(){
+        console.log('鼠标移入了div_');
+    }
+
+    // 当鼠标移出
+    div_1.onmouseout = function(){
+        console.log('鼠标移出了div_');
+    }
+    // div_1.addEventListener('mouseout',function(){
+    //     console.log('鼠标移出了div_');
+    // })
+
+    // 鼠标按下
+    // div_1.onmousedown = function(){
+    //     console.log('鼠标按下了');
+    // }
+
+    // //  鼠标抬起 
+    // div_1.onmouseup = function(){
+    //     console.log('鼠标抬起来了');
+    // }
+
+    // div_1.onmousemove = function(){
+    //     console.log('鼠标移动了');
+    // }
+
+    // 只作用于当前元素的移出入  移出入到子元素 不会触发
+    div_1.onmouseenter = function(){
+        console.log('鼠标移入了div_1,且只移入到div_1');
+    }
+
+    div_1.onmouseleave = function(){
+        console.log('鼠标移出了div_1,且只移出到div_1');
+
+    }
+</script>

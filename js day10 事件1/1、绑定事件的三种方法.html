@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fn()">第1种</button>
+    <button>第2种</button>
+    <button>第3种</button>
+</body>
+</html>
+
+<script>
+    // 找到button
+    var btn_ = document.getElementsByTagName('button');
+    function fn(){
+        alert('第一种绑定事件');
+    }
+
+    // 第二种
+    btn_[1].onclick = function(){
+        alert('第二种绑定事件');
+    }
+
+    // 第三种 通过监听器绑定
+    // btn_[2].addEventListener('click',function(){
+    //     alert('第三种监听器');
+    // });
+    function fn2(){
+        alert('第三种监听器');
+    }    
+    btn_[2].addEventListener('click',fn2);
+
+    // 删除事件
+    btn_[2].removeEventListener('click',fn2);
+</script>

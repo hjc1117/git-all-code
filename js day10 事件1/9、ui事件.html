@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ui事件</title>
+    <style>
+        div{
+            height: 1300px;
+            background-color: rgb(20, 82, 90);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+
+<script>
+    // 找到div
+    // var div = document.querySelector('div');
+    window.onload = function(){
+        console.log('页面加载完成');
+    }
+
+    //滚轮滑动 页面滚动
+
+    window.onscroll = function(){
+        console.log('页面滚动了');
+    }
+
+    // 页面重置大小的时候
+    window.onresize = function(){
+        // console.log('页面重置大小了');
+        console.log(window.innerWidth);
+        console.log(window.innerHeight);
+    }
+</script>

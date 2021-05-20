@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #txt{
+            width: 500px;
+            border: 3px solid #999;
+        }
+    </style>
+</head>
+<body>
+    <button>+</button>
+    <button>-</button>
+    <div id="txt">
+        （一）走上古驿道
+   他一声不响起身到卧房去，自己开了衣柜的们，取出他出门穿的衣服，挂在衣架上，还挑了一条干净手绢，放在衣袋里。他是准备亲自去报到，不需我代表——他也许知道我不能代表。
+    我和阿圆还只顾捉摸开什么会。钟书没精打采地干完他的晚事（洗洗换换），乖乖地睡了。他向例早睡早起，我晚睡晚起，阿圆晚睡早起。
+    第二天早上，阿圆老早做了自己的早饭，吃完到学校上课去。我们两人的早饭总是钟书做的。他烧开了水，泡上浓香的红茶，热了牛奶（我们吃牛奶红茶），煮好老嫩合适的鸡蛋，用烤面包机烤好面包，从冰箱里拿出黄油、果酱等放在桌上。我起床和他一起吃早饭。然后我收拾饭桌，刷锅洗碗，等着他穿着整齐，就一同下楼散散步，等候汽车来接。
+    将近九点，我们同站在楼门口等待。开来一辆大黑汽车，车里出来一个穿制服的司机。他问明钱钟书的身分，就开了车门，让他上车。随即关上车门，好像防我跟上去似的。我站在楼门口，眼看着那辆车稳稳地开走了。我不识汽车是什么牌子，也没注意车牌的号码。
+    我一个人上楼回家。自从去春钟书大病，我陪住医院护理，等到他病愈回家，我叫软头晕，成了风吹能倒的人。近期我才硬朗起来，能独立行走，不再需扶墙摸壁。但是我常常觉得年纪不饶人，我已力不从心。
+    </div>
+
+</body>
+</html>
+
+<script>
+    // 获取按钮
+    var btn_1 = document.getElementsByTagName('button')[0];//+号按钮
+    var btn_2 = document.getElementsByTagName('button')[1];//-号按钮
+
+    // 找到div
+    var txt = document.getElementById('txt');
+
+    var font_s = 12;
+
+    btn_1.onclick = function(){
+        font_s +=2;
+        txt.style.fontSize = font_s+'px';
+    }
+
+    btn_2.addEventListener('click',function(){
+        font_s -= 2;
+        txt.style.fontSize = font_s+'px';
+    })
+
+</script>

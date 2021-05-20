@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            width: 500px;
+            height: 300px;
+            border: 3px solid rgb(17, 104, 71);
+        }
+    </style>
+</head>
+<body>
+    <div contenteditable=""></div>
+</body>
+</html>
+
+<script>
+    // 找到可编辑的div
+    var div_ = document.querySelector('div');
+    div_.onkeydown = function(){
+        console.log('键盘被按下');
+    }
+  
+    div_.onkeyup = function(){
+        console.log('键盘抬起了');
+    }
+
+    div_.onkeypress = function(){
+        console.log('键盘按下抬起的一瞬间');
+    }
+</script>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span></span>
+    <button>开始</button>
+    <button>暂停</button>
+    <button>重置</button>
+</body>
+
+</html>
+
+<script>
+    // 获取三个button按钮  和  重置按钮
+    var btn = document.getElementsByTagName('button');
+    // 获取放事件的span
+    var span_ = document.getElementsByTagName('span')[0];
+
+    var num = 10;// 倒计时初始值
+
+    var timer; //接收定时器
+    //绑定开始按钮
+    //设置span样式
+    btn[0].onclick = function () {
+        span_.style.display = 'block';
+        span_.style.fontSize = '40px';
+        span_.style.color = 'red';
+
+        clearInterval(timer);
+        timer = setInterval(function () {
+            span_.innerHTML = num;
+            num--;
+            if (num < 0) {
+                clearInterval(timer);
+            }
+        }, 1000)
+    }
+
+    //暂停按钮
+    btn[1].addEventListener('click', function () {
+        clearInterval(timer);
+    });
+
+    //重置按钮
+    btn[2].addEventListener('click', function () {
+        num = 10;
+        span_.innerHTML = 10;
+        clearInterval(timer);
+    });
+</script>
