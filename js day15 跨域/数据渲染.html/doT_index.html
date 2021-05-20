@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #list{
+            list-style: none;
+            width: 400px;
+            margin: 0 auto;
+        }
+        #list>li{
+            border-bottom: 2px solid rgb(221, 218, 218);
+            padding-bottom: 20px;
+        }
+
+        #list>li>img{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showData()">展示数据</button>
+
+    <!-- 3.找到展示数据的区域 -->
+    <ul id="list">
+        <!-- <li>
+            <p>鄱阳湖</p>
+            <img src="http://img4.cache.netease.com/photo/0001/2017-07-14/CP9QN0396VVV0001.jpg" alt="">
+            <div>
+                中国最大淡水湖鄱阳湖持续多日超警戒水位，鄱阳湖庐山市水域的古迹落星墩基座被淹，观景台、古塔、牌坊、禅院等建筑浸在水中。图为7月12日在江西鄱阳湖庐山市水域拍摄的浸在水中的落星墩。（来源：网易综合）
+            </div>
+        </li>
+         -->
+       
+    </ul>
+</body>
+</html>
+
+<script>
+    function showData(){
+        // 1、获取数据
+        var ajax_ = new XMLHttpRequest() || new ActiveXObject();
+        ajax_.open('get','./doT.json',true);
+        ajax_.send();
+        ajax_.onreadystatechange = function(){
+            if(ajax_.readyState ==  4){
+                if(ajax_.status == 200){
+
+                    // 2.找到数据
+                    var data = JSON.parse(ajax_.responseText);
+
+                      /* dot_5.调用方式  找到模板 把数据传进去*/
+                        // var tmpText = doT.template(模板);
+                        // tmpText(数据源);
+
+                    var tmpText = doT.template(document.getElementById('templ').innerHTML);
+                    document.getElementById('list').innerHTML=tmpText(data.list);
+                    
+                }else{
+                    console.log('请求失败');
+                }
+            }
+        }
+    }
+  
+</script>
+
+<!-- 1、引入dot.JS -->
+<script src="./doT.min.js"></script>
+
+<!-- 4、创建模板 -->
+
+<script id="templ"  type="text/x-dot-template">
+
+    <!-- 6、拼接数据 -->
+    {{~it:value:index}}
+       <li>
+           <p>{{=value.imgtitle}}</p>
+           <img src="{{=value.imgurl}}" alt="">
+           <div>{{=value.note}}</div>
+       </li> 
+
+    {{~}}
+
+</script>
+

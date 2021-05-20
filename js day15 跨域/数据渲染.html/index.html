@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #list{
+            list-style: none;
+            width: 400px;
+            margin: 0 auto;
+        }
+        #list>li{
+            border-bottom: 2px solid rgb(221, 218, 218);
+            padding-bottom: 20px;
+        }
+
+        #list>li>img{
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showData()">展示数据</button>
+
+    <ul id="list">
+        <!-- <li>
+            <p>鄱阳湖</p>
+            <img src="http://img4.cache.netease.com/photo/0001/2017-07-14/CP9QN0396VVV0001.jpg" alt="">
+            <div>
+                中国最大淡水湖鄱阳湖持续多日超警戒水位，鄱阳湖庐山市水域的古迹落星墩基座被淹，观景台、古塔、牌坊、禅院等建筑浸在水中。图为7月12日在江西鄱阳湖庐山市水域拍摄的浸在水中的落星墩。（来源：网易综合）
+            </div>
+        </li>
+         -->
+       
+    </ul>
+</body>
+</html>
+
+<script>
+    function showData(){
+        // 1、获取数据
+        var ajax_ = new XMLHttpRequest() || new ActiveXObject();
+        ajax_.open('get','./doT.json',true);
+        ajax_.send();
+        ajax_.onreadystatechange = function(){
+            if(ajax_.readyState ==  4){
+                if(ajax_.status == 200){
+                    var data = JSON.parse(ajax_.responseText);
+                    // console.log(data);
+                    show(data);
+                }else{
+                    console.log('请求失败');
+                }
+            }
+        }
+    }
+
+    
+
+    // 展示方法 show()
+    function show(dataObj){
+        var ul_ = document.getElementById('list');
+        var str = '';
+        for(var i = 0;i<dataObj.list.length;i++){
+            str +='<li>';
+            str +='<p>'+dataObj.list[i].imgtitle+'</p>';
+            str +='<img src="'+dataObj.list[i].imgurl+'">';
+            str += '<div>'+dataObj.list[i].note+'</div>';
+            str +='</li>';
+        }
+
+        ul_.innerHTML = str;
+
+    }
+</script>

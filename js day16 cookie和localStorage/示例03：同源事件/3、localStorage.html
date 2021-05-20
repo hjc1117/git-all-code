@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localStorage本地存储</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    // localStorage 存值语法
+    // localStorage.setItem(key,value);
+    localStorage.setItem('user', '老陈拉斯维加斯');
+    localStorage.setItem('psd', 888888);
+    localStorage.setItem('isrember', true);
+
+    // 想向localStorage中存储对象  注意： 存值的值  必须是字符串 不能是对象
+    var msg = {
+        'name': '赵四',
+        'age': '50',
+        'address': '辽宁铁岭'
+    }
+    // JSON.parse(字符串);   字符串 转成了对象
+    // JSON.stringify(对象)；  对象 转字符串
+    msg = JSON.stringify(msg);
+    localStorage.setItem('user_msg', msg);
+
+    // localStorage 取值
+
+    var u = localStorage.getItem('user');
+    console.log(u);
+    var user_msg = localStorage.getItem('user_msg');
+
+    // 字符串 转成了对象
+    user_msg = JSON.parse(user_msg);
+    console.log(user_msg.address);
+
+
+
+    //删除
+    //removeItem('key') 删除数据，通过key来删除相应的value
+
+    // localStorage.removeItem('user');
+
+    // localStorage 清空数据
+    // localStorage.clear();
+
+    // 获取存储数据的长度
+   
+    // console.log('长度是：-----'+ localStorage.length);
+
+    // localStorage.key(0) 取到下标为0的键名
+    // console.log(localStorage.key(0));
+    // console.log(localStorage.key(1));
+    // console.log(localStorage.key(2));
+    // console.log(localStorage.key(3));
+
+
+    // 遍历localstorage
+    for(var i=0;i<localStorage.length;i++){
+        // 得到键名
+        var key_ = localStorage.key(i);
+        //通过键名  得到值
+        var val = localStorage.getItem(key_);
+
+        console.log(key_+'======'+val);
+    }
+
+</script>

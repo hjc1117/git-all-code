@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>同源2</title>
+</head>
+<body>
+	
+	<input type="text" id="txt">
+	<button id="btn">设置</button>
+	<div id="con"></div>
+
+	<script>
+		var txt=document.getElementById('txt');
+		var btn=document.getElementById('btn');
+		var con=document.getElementById('con');
+
+		btn.onclick=function(){
+			localStorage.setItem("name1",txt.value);
+		}
+		
+		window.addEventListener("storage",function(ev){
+			console.log(0);
+			var ev=ev||window.event;
+			con.innerHTML+="被增加或删除或修改的key是："+ev.key+"<br>";
+			con.innerHTML+="被修改之前的key的值是："+ev.oldValue+"<br>";
+			con.innerHTML+="被修改之后的key的新值是："+ev.newValue+"<br>";
+			con.innerHTML+="修改key值的页面url是："+ev.url;
+		},false)
+		
+	</script>
+</body>
+</html>

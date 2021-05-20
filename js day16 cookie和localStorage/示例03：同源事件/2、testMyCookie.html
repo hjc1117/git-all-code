@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script src="./myCookie.js"></script>
+
+<script>
+    // setCookie('name','老陈',1);
+    setCookie('name','老陈');
+    setCookie('name','尼古拉斯');
+    setCookie('psw',123456);
+    setCookie('isrember',true);
+
+    
+    // 获取cookie
+    getCookie();
+
+    var n_val = getCookie('psw');
+    // var n_val = getCookie('isrember');
+    console.log(n_val);
+
+    //删除cookie
+    removeCookie('psw');
+</script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getJsonp()">获取jsonp数据</button>
+</body>
+</html>
+
+<script>
+    function test(v){
+        console.log(v);
+    }
+    function getJsonp(){
+        var script_ = document.createElement('script');
+        script_.src = 'http://localhost:3003/jsonp?callback=test';
+        document.body.appendChild(script_);
+
+        // 卸磨杀驴  
+        if(script_){
+            document.body.removeChild(script_);
+        }
+    }
+</script>

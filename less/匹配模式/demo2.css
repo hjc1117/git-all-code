@@ -1,0 +1,16 @@
+/* 边框的样式 和颜色用变量 */
+div {
+  width: 400px;
+  height: 800px;
+  border: 20px yellow dashed;
+}
+ul {
+  width: 200px;
+  height: 200px;
+  border: 20px yellow dashed;
+}
+h1 {
+  width: 400px;
+  height: 400px;
+  border: 10px yellow dashed;
+}

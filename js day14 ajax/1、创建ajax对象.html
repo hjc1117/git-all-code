@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+<script>
+    // 1.创建ajax对象
+    var ajax_ = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+   
+    // 2.建立连接
+    // open(方式，后台地址（文件名），同步异步)
+    // 参数一：post / get(网络请求的方式)
+    // 参数二：请求的文件名（后台地址）
+    // 参数三：同步（false）  异步（true）
+    //               127.0.0.1:3001/user?username=chenfuguo&pass=123456;
+    
+    ajax_.open('get','./a.txt',true);
+   
+    // 3.发送请求
+    ajax_.send();
+
+    // 4.接收返回值
+
+    ajax_.onreadystatechange = function(){
+        console.log(ajax_.readyState);
+        if(ajax_.readyState == 4){
+            // 状态响应码  
+            //  200  成功   404 找不到页面 500 服务器内部错误
+            if(ajax_.status == 200){
+                // console.log('成功'); request 请求 response响应
+                console.log(ajax_.responseText); 
+            }else{
+                console.log('失败');
+            }
+        }
+    }
+
+</script>

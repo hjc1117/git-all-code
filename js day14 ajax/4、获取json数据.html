@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // 1、创建对象
+    var ajax_ = new XMLHttpRequest() || new ActiveXObject();
+    // 2、建立连接
+    ajax_.open('get','./testJ.json',true);
+    // 3、发送请求
+    ajax_.send();
+    // 4、处理数据
+    ajax_.onreadystatechange = function(){
+        if(ajax_.readyState == 4){
+            if(ajax_.status == 200){
+                var str_j  = ajax_.responseText;
+
+                // 把json数据 转成对象
+                // str_j = eval('('+str_j+')');
+
+                str_j = JSON.parse(str_j);
+
+                console.log(str_j);
+                console.log(str_j.name,str_j.address,str_j.age);
+                console.log(str_j.hoby);
+            }else{
+                console.log('请求失败');
+            }
+        }
+    }
+</script>

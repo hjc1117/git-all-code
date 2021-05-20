@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+
+    // 用于给函数传递大量可选参数
+    // 可选  可不选
+
+    //童装   年龄 5-10     性别  女   地址  非洲
+    function fn(obj) {
+        default_obj = {
+            a: 'a',
+            b: 'b',
+            c: 'c',
+            d: 'd',
+        }
+
+        // Object.assign(被覆盖内容，覆盖内容);  
+        //用来合并目标对象的，如果有相同属性会覆盖，否则就合并
+        var n_obj = Object.assign(default_obj, obj);
+        console.log(n_obj);
+    }
+
+
+    fn({
+        a: 'a1111',
+        b: 'b1111',
+        c: 'c1111',
+        d:'d1111',
+        f:'f11111'
+    });
+
+
+    // function fn(a,b){
+
+    //     console.log(a+b);
+    // }
+
+    // // fn(5,8);
+    // fn();
+</script>

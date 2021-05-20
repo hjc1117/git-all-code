@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getData()">获取数据</button>
+    
+</body>
+</html>
+
+<script>
+
+    function getData(){
+        //1、创建对象
+        var ajax_ = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+        // var ajax_ = new XMLHttpRequest || new ActiveXObject;
+        //2、建立连接
+        // ajax_.open('get','./a.txt',true);
+        ajax_.open('get','https://api.apiopen.top/todayVideo',true);
+        //3、发送请求
+        ajax_.send();
+        //4、处理响应数据
+        ajax_.onreadystatechange = function(){
+            if(ajax_.readyState == 4){
+                if(ajax_.status == 200){
+                    console.log(ajax_.responseText);
+                }else{
+                    console.log('请求失败');
+                }
+            }
+        }
+    }
+
+</script>

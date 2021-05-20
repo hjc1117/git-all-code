@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* less语法 */
+/* 可以被编译到css中的注释 */
+ul li a {
+  color: yellow;
+  font-size: 50px;
+}
+#box span {
+  color: red;
+  font-size: 80px;
+}
+.box2 span {
+  color: skyblue;
+}
+/* 使用变量声明值
+
+ @变量名： 值；
+*/
+#box3 {
+  width: 200px;
+  height: 400px;
+  border: 2px solid #e28282;
+}

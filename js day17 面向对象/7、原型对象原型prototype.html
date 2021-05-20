@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function CreatUser(name,age,job,address){
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.address = address;
+        
+    }
+
+    // 把不变的东西 挂在 原型对象上面
+    CreatUser.prototype.show = function(){
+        // console.log('哈哈，孙子，爷爷的宝贝你拿到了吧');
+        document.write('姓名：'+this.name+"<br>年龄："+this.age+"<br>"+'职业：'+this.job+"<br>"+'地址：'+this.address+"<hr>");
+    }
+    // CreatUser.prototype.nameYY = '大聪明';
+
+
+    var user1 = new CreatUser('老陈','40','超市市长','冉屯东路');
+    var user2 = new CreatUser('老王','50','藏王阁阁主','日本东京');
+    user1.show();
+    user2.show();
+    // console.log(user1.nameYY);
+    // console.log(user1.job);
+
+</script>

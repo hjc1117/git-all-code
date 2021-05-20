@@ -1,0 +1,138 @@
+// div{
+//     width: 0;
+//     height: 0;
+//     border-width: 50px;
+//     border-style: solid;
+//     // border-color: red transparent transparent transparent;
+//     // 上  右  下 左
+//     border-color: transparent red  transparent transparent;
+//     border-color: transparent  transparent red  transparent;
+// }
+
+
+// 向上的三角形  下颜色
+*{
+    margin: 0;
+    padding: 0;
+}
+.sanjiao(top,@w_,@c_){
+    border-width: @w_;
+    border-style: solid;
+    border-color: transparent transparent @c_ transparent;
+}
+
+// 向下的三角形  下颜色
+
+.sanjiao(bottom,@w_,@c_){
+    border-width: @w_;
+    border-style: solid;
+    border-color: @c_  transparent transparent transparent;
+}
+
+// 向右的三角形  下颜色
+
+.sanjiao(right,@w_,@c_){
+    border-width: @w_;
+    border-style: solid;
+    border-color: transparent transparent transparent @c_ ;
+}
+
+
+
+// 向左的三角形  下颜色
+
+.sanjiao(left,@w_,@c_){
+    border-width: @w_;
+    border-style: solid;
+    border-color: transparent  @c_  transparent transparent;
+}
+
+// @_ 指代当前方法内的内容 每次调用的时候都会带上
+.sanjiao(@_,@w_,@c_){
+    width: 0;
+    height: 0;
+}
+
+
+#box1{
+    // width: 0;
+    // height: 0;
+    .sanjiao(top, 50px, skyblue);
+}
+
+
+#box2{
+    // width: 0;
+    // height: 0;
+    .sanjiao(left, 100px, red)
+}
+
+
+
+#box3{
+    // width: 0;
+    // height: 0;
+    .sanjiao(right, 100px, yellow)
+}
+
+ .b(@cc_:skyblue){
+    border: 4px solid @cc_;
+ }
+
+
+//  设置定位
+.p(r){
+    position: relative;
+}
+.p(a){
+    position: absolute;
+}
+.p(f){
+    position: fixed;
+}
+
+.p(@_){
+    left: 200px;
+    top: 500px;
+}
+@wid:500px;
+ul{
+    width:(@wid/500);
+    height: 300px;
+    .b(red);
+    li{
+        width: 350px;
+        height: 200px;
+        .b(green);
+        // .p(r);
+        a{
+            .p(a);
+            // & 代表上级元素
+            &:hover{
+                color: aqua;
+            }
+
+            // left: 200px;
+            // top: 300px;
+        }
+        // a:hover{
+        //     color: pink;
+        // }
+    }
+}
+// @arguments包含了所有传递进来的参数。
+.border_arg(@width_,@style_,@color_){
+    // border: @width_ @style_ @color_;
+    border: @arguments;
+}
+
+#divx{
+    width: 300px;
+    height: 300px;
+    .border_arg(5px,solid,yellow) !important;
+    &>a{
+        color: red;
+    }
+}
+
+

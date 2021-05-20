@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width='device-width', initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    
+    // 构造器  构造函数
+    function CreatUser(name,age,job,address){
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.address = address;
+
+        this.show = function(){
+            document.write('姓名：'+this.name+"<br>年龄："+this.age+"<br>"+'职业：'+this.job+"<br>"+'地址：'+this.address+"<hr>");
+        }
+    }
+
+
+    // 创建对象  new  构造函数
+    var user1 =  new CreatUser('老陈',25,'前端忽悠师','河南郑州');
+    var user2 =  new CreatUser('老李',27,'班主任','河南郑州');
+
+    user1.show();
+    user2.show();
+
+    // instanceof  原对象 和实例对象之间 是存在内在联系的
+    console.log(user1 instanceof CreatUser);
+</script>

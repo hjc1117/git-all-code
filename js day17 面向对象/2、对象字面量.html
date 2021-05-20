@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象字面量</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+//    {
+//        属性：'值'，
+//        属性：'值'
+
+//    }
+
+    var bf = {
+        name:'蔡徐昆',
+        age:32,
+        address:'郑州老陈旗下QY135',
+        show:function(){
+            document.write('大家好，我叫'+this.name+",来自"+this.address+'<br>我喜欢唱跳rap打球')
+        }
+    }
+
+    // 属性show
+    // bf.show;
+    bf.show();
+</script>

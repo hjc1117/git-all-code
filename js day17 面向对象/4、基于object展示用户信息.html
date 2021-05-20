@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    // 基本Object对象的方式创建person对象
+
+    // 使用“.”为对象person添加属性name、age、job和address
+
+    // 添加方法intro() ，在页面上显示对象属性name、age、job和address的值
+
+    var person = new Object();
+    person.name = '马保国';
+    person.age = 68;
+    person.job = '浑元形意太极门';
+    person.address = '伦敦';
+
+    person.intro = function(){
+        document.write('姓名：'+this.name+"<br>年龄："+this.age+"<br>"+'职业：'+this.job+"<br>"+'地址：'+this.address);
+    }
+
+
+    person.intro();
+</script>

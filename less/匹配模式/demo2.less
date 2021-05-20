@@ -1,0 +1,47 @@
+@w:400px;
+@h:@w*2;
+
+/* 边框的样式 和颜色用变量 */
+@c:rgb(170, 56, 56);
+@style:dashed;
+
+
+// 边框的样式
+// .border{
+//     border: 2px @c @style;
+// }
+
+// 样式传参
+// .border(@c_){
+//     border: 2px @c_ @style;
+// }
+
+// 样式参数默认值
+// 多个参数进行传值 一一对应的传值
+.border(@w_:20px,@c_:yellow){
+    border: @w_ @c_ @style;
+}
+
+div{
+    // width: 200px;
+    // height: 400px;
+    // border: 2px solid red;
+    width: @w;
+    height: @h;
+    // border: 2px solid red;
+    // border: 2px @style @c;
+    .border;
+}
+
+ul{
+    width: 200px;
+    height: 200px;
+    .border;
+}
+
+h1{
+    width: 400px;
+    height: 400px;
+    .border(10px);
+}
+

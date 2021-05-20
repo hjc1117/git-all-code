@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    // Object的方式创建对象
+    //  gf  对象    object 类
+    var gf = new Object();
+    gf.name = '苍桑空';
+    gf.age = 42;
+    gf.address = '日本东京';
+
+    // this 指向当前对象  
+    gf.show = function(){
+        document.write('大家好，我叫'+this.name+",来自"+this.address+',银家今年'+this.age+'岁了，嘤嘤嘤');  
+    }
+
+ 
+    gf.show();
+
+    // console.log(gf.name);
+
+</script>

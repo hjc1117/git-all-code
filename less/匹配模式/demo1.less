@@ -1,0 +1,50 @@
+// 传统css的写法
+// ul>li>a{
+//     color: red;
+// }
+
+
+/* less语法 */
+
+
+// 两种注释  第一种//  不会被编译到css文件中
+
+/* 可以被编译到css中的注释 */
+
+ul{
+    li{
+        a{
+            color: yellow;
+            font-size: 50px;
+        }
+    }
+}
+
+
+#box{
+    span{
+        color: red;
+        font-size: 80px;
+    }
+}
+
+.box2{
+    span{
+        color: skyblue;
+    }
+}
+
+
+/* 使用变量声明值
+
+ @变量名： 值；
+*/
+
+@width:200px;
+@height:@width*2;
+
+#box3{
+    width: @width;
+    height: @height;
+    border: 2px solid rgb(226, 130, 130);
+}

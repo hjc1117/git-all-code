@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    function ceratUser(name,age,job,address){
+        var peson = new Object();
+        // 属性name    形参name
+        peson.name = name;
+        peson.age = age;
+        peson.job = job;
+        peson.address = address;
+        peson.show=function(){
+            document.write('姓名：'+this.name+"<br>年龄："+this.age+"<br>"+'职业：'+this.job+"<br>"+'地址：'+this.address+"<hr>");
+        }
+
+        return peson;
+
+    }
+
+
+   var user1 =  ceratUser('马保国',68,'传武骗子','伦敦');
+
+   var user2 =  ceratUser('聂晓',42,'成功学大师','犄角旮旯');
+   var user3 =  ceratUser('老陈',27,'3a颜值天花板','南都帝乡四圣故里');
+
+   user1.show();
+   user2.show();
+   user3.show();
+
+   //false  instanceof  看内在联系 实例对象  和原型对象的联系
+   console.log(user1 instanceof ceratUser);
+
+    // console.log(user1);
+    // console.log(user2);
+</script>

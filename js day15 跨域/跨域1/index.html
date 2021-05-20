@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结合nodejs通过ajax实现登陆注册</title>
+</head>
+<body>
+    用户名：<input type="text" name="user" id="user">
+    <br>
+    密码： <input type="password" name="pass" id="pass">
+
+    <br>
+    <input type="submit" value="注册" onclick="register()">
+    <input type="submit" value="登录" onclick="login()">
+    
+</body>
+</html>
+
+<script>
+    // 注册功能
+    function register(){
+        //获取input框输入的内容
+        var user_ = document.getElementById('user').value;
+        var pass_ = document.getElementById('pass').value;
+
+        //创建ajax
+        var ajax_ = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+        //建立连接
+        ajax_.open('post','http://127.0.0.1:3001/user',true);
+
+        //发送请求
+        //               act=reg&user=zhangsan&pass=123456
+        var reg_data = 'act=reg&user='+user_+'&pass='+pass_;
+    
+        ajax_.send(reg_data);
+
+        //接收请求数据
+        ajax_.onreadystatechange = function(){
+            if(ajax_.readyState == 4){
+                if(ajax_.status == 200){
+                    console.log(ajax_.responseText);
+                }else{
+                    console.log('请求失败');
+                }
+            }
+        }
+    }
+
+    //登陆功能
+
+    function login(){
+        var user_ = document.getElementById('user').value;
+        var pass_ = document.getElementById('pass').value;
+
+        //1、创建对象
+        var ajax_ = new XMLHttpRequest() || new ActiveXObject();
+        // 2、建立连接
+        ajax_.open('post','http://127.0.0.1:3001/user',true)
+        // 3、发送请求
+        var login_data = 'act=login&user='+user_+'&pass='+pass_;
+        ajax_.send(login_data);
+        // 4、处理数据
+
+        ajax_.onreadystatechange = function(){
+            if(ajax_.readyState == 4){
+                if(ajax_.status == 200){
+                    console.log(ajax_.responseText);
+                }else{
+                    console.log('请求失败');
+                }
+            }
+        }
+    }
+</script>
