@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.picture{
+    background-color: rgb(246, 246, 246);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    background:url(./img/飞行.gif)no-repeat;
+    background-size: 100% 100%;
+    animation: picture 1s ease 5.5s forwards;
+}
+@keyframes picture{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        z-index: 1;
+    }
+}
+.picture h1{
+    display:inline-block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+    box-sizing: border-box;
+    width: 160px;
+    color: white;
+}
+.picture h1 span{
+    display: inline-block;
+    animation: span 2s steps(3) infinite;
+    height: 90px;
+    width: 150px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+@keyframes span{
+    0%{
+        width: 130px;
+    }
+    
+    100%{
+        width: 155px;
+    }
+}
+.picture .loading{
+    height: 30px;
+    width: 300px;
+    background-color: white;
+    border-radius: 50px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+}
+.picture .loading .load{
+    height: 100%;
+    width: 100%;
+    animation:load 5s linear forwards;
+    /* background-color: rgb(255, 0, 149); */
+    border-radius: 50px;
+}
+@keyframes load{
+    0%{
+        width: 0%;
+        background-color: rgb(77, 91, 155);
+    }
+    100%{
+        width: 100%;
+        background-color: rgb(243, 0, 231);
+
+    }
+}

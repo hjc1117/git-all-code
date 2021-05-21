@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 蒙版 */
+        
+        .mark {
+            width: 100%;
+            height: 3128px;
+            background-color: black;
+            opacity: .3;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        /* 新增的图片 nImg */
+        
+        .nImg {
+            position: absolute;
+            left: 480px;
+            top: 200px
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 此处表示页面的背景 我们看到的页面 起始是一张图片 -->
+    <div class="background">
+        <img src="../images/bj.png" alt="">
+    </div>
+</body>
+<script>
+    var show = setInterval(function() {
+        // 先获取body
+        var body_ = document.getElementsByTagName('body')[0];
+
+        // 创建蒙版
+        var new_div = document.createElement('div'); //<div> </div>
+        new_div.className = 'mark'; //<div class='mark'> </div>
+        body_.appendChild(new_div);
+
+
+        // 创建小广告图片
+        var new_img = document.createElement('img'); // <img src =''>
+        new_img.className = 'nImg'; // <img src = ''  class = 'nImg'>
+        new_img.src = '../images/pic.png';
+        body_.appendChild(new_img);
+
+        // 点击弹出的小广告  关闭  删除我们追加的div 和 img
+        new_img.onclick = function() {
+            body_.removeChild(new_img);
+            body_.removeChild(new_div);
+        }
+
+        clearInterval(show);
+
+    }, 3000);
+</script>
+
+</html>

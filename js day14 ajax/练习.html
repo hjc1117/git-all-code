@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    用户名：<input type="text" name="user" id="user">
+    <br> 密码： <input type="password" name="pass" id="pass">
+
+    <br>
+    <input type="submit" value="注册" onclick="register()">
+    <input type="submit" value="登录" onclick="login()">
+
+</body>
+
+</html>
+
+<script>
+    // //1.创建ajax对象
+    // var ajax = new XMLHttpRequest() || new ActiveXObject();
+    // //2.连接到服务器
+    // ajax.open('get', './ts.json', true);
+    // //3.发送数据
+    // ajax.send();
+    // //4.接收处理
+    // ajax.onreadystatechange = function() {
+    //     if (ajax.readyState == 4) {
+    //         if (ajax.status == 200) {
+    //             var str = ajax.responseText; //接收ajax的响应数据
+    //             str = JSON.parse(str); //把json的数据类型由数据转化成对象
+    //             console.log(str.hoby);
+    //         } else {
+    //             console.log('请求失败');
+    //         }
+    //     }
+    // }
+
+
+    //注册
+    function register() {
+        //获取input框输入的内容
+        var user_ = document.getElementById('user').value;
+        var pass_ = document.getElementById('pass').value;
+        //声明ajax,创建ajax对象
+        var ajax = new XMLHttpRequest() || new ActiveXObject();
+        //建立链接
+        ajax.open('post', 'http://127.0.0.1:3001/user', true);
+
+        //将收到的数据字符与源数据库拼接
+        var reg_ = 'act=reg&user=' + user_ + '&pass=' + pass_;
+        //拼接后发送到服务器
+        ajax.send(reg_);
+        //请求接收数据
+        ajax.onreadystatechange = function() {
+            if (ajax.readyState == 4) { //请求状态码 4
+                if (ajax.status == 200) { //响应状态码 200=ok  404=未找到 500=服务器端内部错误
+                    ajax = ajax.responseText; //接收ajax的响应数据
+                    console.log(ajax);
+                } else {
+                    console.log('响应失败');
+                }
+            }
+        }
+    }
+
+
+    //登录
+    function login() {
+        //获取input框输入的内容
+        var user_ = document.getElementById('user').value;
+        var pass_ = document.getElementById('pass').value;
+        var ajax = new XMLHttpRequest() || new ActiveXObject();
+        ajax.open('post', 'http://127.0.0.1:3001/user', true);
+        var reg_ = 'act=login&user=' + user_ + '&pass=' + pass_
+
+        ajax.send(reg_);
+
+        ajax.onreadystatechange = function() {
+            if (ajax.readyState == 4) {
+                if (ajax.status == 200) {
+                    ajax = ajax.responseText
+                    console.log(ajax);
+                } else {
+                    console.log('响应失败');
+                }
+            }
+        }
+    }
+</script>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>带关闭按钮的滚动广告</title>
+    <style type="text/css">
+        #main {
+            text-align: center;
+        }
+        
+        #float {
+            position: absolute;
+            left: 30px;
+            top: 60px;
+            z-index: 1;
+        }
+        
+        #close {
+            position: absolute;
+            top: 60px;
+            left: 134px;
+            z-index: 2;
+            cursor: hand;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="close" onClick="adv_close()"><img src="images/close.jpg"></div>
+    <div id="float"><img src="images/advpic.jpg"></div>
+    <div id="main"><img src="images/contentpic.jpg"></div>
+
+    <!-- <script src="./js/my.js"></script> -->
+</body>
+
+<script>
+    function adv_close() {
+        document.getElementById('close').style.display = 'none';
+        document.getElementById('float').style.display = 'none';
+    }
+
+    var close_x, close_t, close_l;
+    var pic, pic_t, pic_l;
+
+    window.onload = function() {
+        close_x = document.getElementById('close');
+        close_t = close_x.offsetTop; //offsetTop返回当前元素上边界到它上级元素的上边界的距离，只读属性
+        close_l = close_x.offsetLeft; //offsetLeft返回当前元素左边界到它上级元素的左边界的距离，只读属性
+        // 初始化页面的时候  获取关闭符号  和广告图片距离页面的距离
+        pic = document.getElementById('float');
+        pic_t = pic.offsetTop;
+        pic_l = pic.offsetLeft;
+
+    }
+
+    window.onscroll = function() {
+        // 叉号页面滚动的距离
+        var x_l = document.documentElement.scrollLeft;
+        var x_t = document.documentElement.scrollTop;
+
+        //叉号在页面的位置  等于原始的页面距离+ 滚动的距离
+        close_x.style.top = close_t + x_t + 'px';
+        close_x.style.left = close_l + x_l + 'px';
+
+        // 广告图片页面滚动的距离
+        var p_t = document.documentElement.scrollTop;
+        var p_l = document.documentElement.scrollLeft;
+
+        //广告图片在页面的位置  等于原始的页面距离+ 滚动的距离
+        pic.style.top = pic_t + p_t + 'px';
+        pic.style.left = pic_l + p_l + 'px';
+    }
+</script>
+
+</html>

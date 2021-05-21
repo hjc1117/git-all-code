@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <div class="box">
+        <ul class="brother">
+            <li>刘备</li>
+            <li>关羽</li>
+            <li>张飞</li>
+            <li>赵云</li>
+        </ul>
+    </div>
+
+</body>
+
+<script>
+    // 找到也操作节点  找到一个元素
+    var ul = document.getElementsByClassName('brother')[0];
+    // childNodes 返回所有的子节点 包含换行 文字 标签
+    console.log(ul.childNodes);
+
+    // 返回元素节点
+    console.log(ul.children);
+
+    // 返回 找到  当前节点的爹  父节点
+    console.log(ul.parentNode);
+
+    //找到了刘备
+    console.log(ul.firstChild.nextSibling.firstChild);
+
+
+    // 找关羽
+    console.log(ul.firstChild.nextSibling.nextSibling.nextSibling.firstChild);
+    
+
+    // 找赵云  
+    console.log(ul.lastChild.previousSibling.firstChild);
+
+    
+
+</script>
+
+</html>

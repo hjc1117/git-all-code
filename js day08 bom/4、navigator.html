@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // navigator  该对象 包含浏览器的相关信息
+
+    console.log(window.navigator);
+
+    // 判断是不是谷歌浏览器
+    var version_ = window.navigator.appVersion;
+    console.log(version_);
+
+    if(version_.indexOf('Chrome') !=-1){
+        alert("谷歌浏览器");
+    }else{
+        alert('非谷歌浏览器');
+    }
+</script>
+</html>

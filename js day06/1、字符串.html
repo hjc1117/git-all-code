@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    // 声明字符串
+    var str1 = '你好老陈';
+    var str2 = new String('abcdefg');
+
+    // 字符串对象  一个属性 长度
+    console.log(str1.length); //4
+    console.log(str2.length); //7
+
+    // char  单个字符
+
+    console.log(str1.charAt(3)); //陈 charAt(下标)  返回的是字符串下标对应的字符
+
+    //  a.concat(b),代表着： a合并b  得到一个新的字符串  不修改原字符串 
+    console.log(str1.concat(str2));
+    console.log(str1);
+
+
+    var str3 = 'baccaaddea';
+    console.log(str3.replace(/a/, '*'));
+    console.log(str3.replace(/a/g, '-'));
+
+    var str4 = '春来鸟不惊';
+
+    console.log(str4.split('鸟')); //春来  不惊
+    console.log(str4.split('')); //'春' '来' '鸟' '不'  '惊'
+
+    // indexof('字符'); 返回的是  第一个匹配到该字符的下标  找不到返回-1
+    console.log(str4.indexOf('春')); // 0
+    console.log(str4.indexOf('人')); // -1
+
+    // lastIndexof('字符')返回的是  最后一个匹配到该字符的下标  找不到返回-1
+    console.log(str3.lastIndexOf('a')); //9
+    console.log(str3.indexOf('a')); //1
+</script>
+
+</html>

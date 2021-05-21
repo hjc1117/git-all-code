@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>无效页面</title>
+</head>
+<body>
+    无效页面，<span>5</span>秒后返回
+    
+</body>
+
+<script>
+    // 找到当前页面的span标签
+    var span_ = document.getElementsByTagName('span')[0];
+    var i =5;
+    var timer = setInterval(function(){
+        i--;
+        span_.innerHTML = i;
+        // 当i = 0的时候，返回之前页面  清除计时器
+        if(i==0){
+            history.back();
+            clearInterval(timer);
+        }
+    },1000)
+   
+</script>
+</html>

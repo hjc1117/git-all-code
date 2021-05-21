@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/cartStyle.css">
+</head>
+
+<body>
+    <div class="content">
+        <div class="logo">
+            <img src="./images/dd_logo.jpg"><span onclick="close_plan();">关闭</span>
+        </div>
+        <div class="cartList" id="cartList">
+            <ul>
+                <li>¥<input type="text" name="price" value="21.90"></li>
+                <li><input type="button" name="minus" value="-" onclick="minus(0);"><input type="text" name="amount" value="1"><input type="button" name="plus" value="+" onclick="plus(0);"></li>
+                <li id="price0">¥21.90</li>
+                <li>
+                    <p onclick="collection();">移入收藏</p>
+                    <p onclick="del();">删除</p>
+                </li>
+            </ul>
+            <ul>
+                <li>¥<input type="text" name="price" value="24.00"></li>
+                <li><input type="button" name="minus" value="-" onclick="minus(1);"><input type="text" name="amount" value="1"><input type="button" name="plus" value="+" onclick="plus(1);"></li>
+                <li id="price1">¥24.00</li>
+                <li>
+                    <p onclick="collection();">移入收藏</p>
+                    <p onclick="del();">删除</p>
+                </li>
+            </ul>
+            <ol>
+                <li id="totalPrice">&nbsp;</li>
+                <li><span onclick="accounts();">结 算</span></li>
+            </ol>
+        </div>
+        <div id="div_"></div>
+    </div>
+</body>
+
+<script>
+    function accounts() {
+        var price0 = document.getElementById('price0').firstChild.nodeValue.split('¥')[1] - 0;
+        console.log(document.getElementById('price0').firstChild.nodeValue.split('¥')[1] - 0);
+        //console.log(price0.firstChild.nodeValue.split('¥')[1]); 
+        //split('')将括号内的字符串分离，使原字符串变成包含两个被分割的字符串的数组，取下他的[1]，即为第二个数组下标(21.90),第一个数组下标为(¥).
+        var price1 = document.getElementById('price1').firstChild.nodeValue.split('¥')[1] - 0;
+        var pri = price0 + price1;
+        document.getElementById('div_').innerHTML = '您本次购买的商品如下：<br> 白岩松：白说：' + '¥' + price0 + '<br>' + '岛上书店：' + '¥' + price1 + '<br>' + '商品总计：' + '¥' + pri;
+
+    }
+</script>
+
+</html>

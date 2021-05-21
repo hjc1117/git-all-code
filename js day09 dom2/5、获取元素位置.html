@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取元素位置</title>
+    <style>
+        div {
+            width: 2300px;
+            height: 3300px;
+            border: 3px solid brown;
+            background-color: rgb(131, 248, 223);
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+   
+</body>
+
+</html>
+
+<script>
+    var div_ = document.getElementsByTagName('div')[0];
+
+    // offsetLeft 	返回当前元素左边界到它上级元素的左边界的距离，只读属性
+    console.log(' offsetLeft:' + div_.offsetLeft);
+    // offsetTop	返回当前元素上边界到它上级元素的上边界的距离，只读属性
+    console.log(' offsetTop:' + div_.offsetTop);
+    // offsetHeight	返回元素的高度
+    console.log(' offsetHeight:' + div_.offsetHeight);
+    // offsetWidth	返回元素的宽度
+    console.log(' offsetWidth:' + div_.offsetWidth)
+    // offsetParent	返回元素的偏移容器，即对最近的动态定位的包含元素的引用
+    console.log(' offsetParent:' + div_.offsetParent);
+
+    // clientWidth	返回元素的可见宽度
+    console.log(' clientWidth:' + div_.clientWidth);
+    // clientHeight	返回元素的可见高度
+    console.log(' clientHeight:' + div_.clientHeight);
+
+
+     // 查看scroolTop、left距离  使用onscrool时间  页面滚动时间
+     window.onscroll = function () {
+        console.log(' scroollTop:' + document.documentElement.scrollTop);
+        // console.log(' scroollTop:' + document.body.scrollTop);
+        // console.log(' scroollTop:' + div_.scrollTop);
+        // console.log(' scroollLeft:' + div_.scrollLeft);
+        console.log(' scroollLeft:' + document.documentElement.scrollLeft);
+    }
+
+</script>

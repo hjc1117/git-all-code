@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            margin: 0 auto;
+            display: none;
+            position: absolute;
+            border: 1px solid #000;
+            text-align: left;
+            text-indent: 1em;
+            width: 150px;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        li {
+            border-bottom: 1px solid #000;
+            height: 50px;
+            line-height: 50px;
+        }
+        
+        li:hover {
+            cursor: pointer;
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>giao!</li>
+            <li>giao!</li>
+            <li>giao!</li>
+            <li>giao!</li>
+            <li>giao!</li>
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+    var div_ = document.getElementsByTagName('div')[0];
+    document.oncontextmenu = function(e) {
+            //获取鼠标或键盘对象,有了e浏览器才能知道你的鼠标在什么位置点击的它
+            e = e || window.event;
+            //兼容两种浏览器取消右键菜单
+            e.preventDefault(); //!ie   
+            e.returnValue = false; //ie
+
+            //右键完该显示了
+            div_.style.display = 'block';
+            //拿到右键点击时鼠标在浏览器中的位置，赋给css
+            div_.style.left = e.clientX + 'px';
+            div_.style.top = e.clientY + 'px';
+        }
+        //左键取消显示
+    document.onclick = function() {
+        div_.style.display = 'none';
+    }
+</script>

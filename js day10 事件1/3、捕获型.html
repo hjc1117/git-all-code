@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,12 +8,13 @@
     <title>捕获型</title>
 
     <style>
-        div{
+        div {
             padding: 20px;
             border: 3px solid red;
         }
     </style>
 </head>
+
 <body>
     <div id="p1">
         爷爷
@@ -21,8 +23,9 @@
             <div id="p3">小美女</div>
         </div>
     </div>
-    
+
 </body>
+
 </html>
 
 <script>
@@ -30,17 +33,16 @@
     var p2 = document.getElementById('p2');
     var p3 = document.getElementById('p3');
 
-    p1.addEventListener('click',function(){
+    p1.addEventListener('click', function() {
         alert('爷爷出手了，暴击');
-    })
+    }, true)
 
-    p2.addEventListener('click',function(){
+    p2.addEventListener('click', function() {
         alert('爸爸出手了，暴击+2');
-    })
+    }, true)
 
 
-    p3.addEventListener('click',function(){
+    p3.addEventListener('click', function() {
         alert('小美女出手了，ko,老陈躺下了');
-    })
-
+    }, true)
 </script>

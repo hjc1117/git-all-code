@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>加油</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    //  92号汽油，每升6元。超过或等于20升，价格降到5.9元；
+	//  95号汽油，每升7元。超过或等于30升，价格降到6.95元；
+
+    var type1 = prompt('请输入汽油型号 92 或者95');
+    var oil_L = prompt('请输入要加油的升数');
+    var money = 0;
+    if(type1== 92 ){
+        alert('您加的是92油');
+        // 超过或等于20升
+        if(oil_L>=20){
+            money = oil_L * 5.9;
+            alert('您加的是92油,加了'+oil_L+'升，一共'+money+'元');
+        }else{
+            money = oil_L * 6;
+            alert('您加的是92油,加了'+oil_L+'升，一共'+money+'元');
+        }
+    }else if(type1 == 95){
+        alert('您加的是95油');
+        // 超过或等于30升
+        if(oil_L>=30){
+            money = oil_L * 6.95;
+            alert('您加的是95油,加了'+oil_L+'升，一共'+money+'元');
+        }else{
+            money = oil_L * 7;
+            alert('您加的是95油,加了'+oil_L+'升，一共'+money+'元');
+        }
+    }else{
+        alert('调皮，请输入正确的汽油型号');
+    }
+</script>
+</html>

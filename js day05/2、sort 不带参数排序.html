@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        animation: forwards;
+    }
+</style>
+
+<body>
+
+</body>
+<script>
+    // 对应字符集的序号排列
+    var arr = [7, 8, 1, 4, 5, 6, 2, 3, 10, 11, 12];
+    //  arr.length;//属性
+    //  document.write(arr.length);
+    //  arr.sort();//方法
+    //  var arr = ['a','d','c','e','w'];
+    //  正序排列
+    //  arr.sort();
+    // function fn(a,b){
+    //     // a，b
+    //     // 一系列的内容
+    //     // 不断重复的使用
+    // }
+
+    // 带参的排序
+    // 底层就是冒泡排序  a  比较的数字  b被比较的数字
+    // arr.sort(function(a,b){
+    //     // 升序 a-b;
+    //     return b-a;
+    // });
+    //  document.write(arr);
+
+
+    arr.sort(function fn(w, q) {
+        return q - w;
+    })
+    console.log(arr);
+</script>
+
+</html>

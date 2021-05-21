@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.0.min.js"></script>
+
+    <!-- <style>
+        ul {
+            list-style: none;
+            margin-top: 10px;
+            height: 100px;
+            width: 100px;
+        }
+        
+        div {
+            width: 100px;
+            height: 100px;
+        }
+    </style> -->
+</head>
+
+<body>
+    <!-- <ul class="a">
+        <li></li>
+        <li></li>
+        <li class="item"></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <ul>
+
+    </ul> -->
+
+    <button>点击</button>
+    <button>点击</button>
+    <button>点击</button>
+    <button>点击</button>
+    <button>点击</button>
+    <button>点击</button>
+</body>
+
+</html>
+
+<script>
+    // $('ul:eq(0)').siblings('ul').css('background-color', 'red')
+
+    $('button').click(function() {
+        $(this).css('background', 'red');
+        $(this).siblings(this).css('background', '');
+    })
+</script>

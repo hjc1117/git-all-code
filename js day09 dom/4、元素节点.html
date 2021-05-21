@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素节点</title>
+</head>
+<body>
+    
+    <div class="box">
+        <ul class="brother"><!-- 注释的节点类型是8 -->
+            <li>刘备</li>
+            <li>关羽</li>
+            <li>张飞</li>
+            <li>赵云</li>
+        </ul>
+    </div>
+</body>
+
+<script>
+    var ul = document.getElementsByClassName('brother')[0];
+
+    // 获取ul 的第一个元素子节点
+    console.log(ul.firstElementChild); //刘备
+    console.log(ul.lastElementChild); //赵云
+    console.log(ul.lastElementChild.previousElementSibling);//张飞
+    console.log(ul.firstElementChild.nextElementSibling.firstChild.nodeValue);//关羽
+    console.log(ul.getAttributeNode('class').nodeValue);//brother
+
+
+    // 获取节点名称
+    console.log(ul.nodeName);//UL
+    console.log(ul.firstElementChild.firstChild.nodeValue);//刘备
+    console.log(ul.nodeType);
+
+    console.log(ul.firstChild.nodeType);//获取了注释  注释的节点类型是8
+</script>
+</html>

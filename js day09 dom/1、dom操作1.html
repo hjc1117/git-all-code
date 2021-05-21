@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取页面元素</title>
+</head>
+
+<body>
+    <span>哈哈哈</span>
+    <button>标签点击</button>
+    <button class="btn">类名点击</button>
+    <button class="btn">类名点击</button>
+    <button id="btnId">id点击</button>
+
+</body>
+
+<script>
+    // 找到页面元素
+    // 1.通过标签名来获取
+    // var btnTag = document.getElementsByTagName('button');
+    // btnTag[0].onclick = function(){
+    //     alert('通过标签名找到了我，点了我一下，痒');
+    // }
+
+
+    // // 通过类名进行查找
+    // var btnClass = document.getElementsByClassName('btn');
+    // // console.log(btnClass);
+    // btnClass[0].onclick = function(){
+    //     alert('通过类名找到了我，点了我一下，疼');
+    // }
+
+    // // 通过id尽心查找
+    // var btnId = document.getElementById('btnId');
+    // btnId.onclick = function(){
+    //     alert('通过id找到了我，我是唯一的');
+    // }
+
+
+    // 匹配到 第一个吻合查找需求的元素
+    var btn = document.querySelector('button');
+    btn.onclick = function() {
+        alert('通过标签名找到了我');
+    }
+
+    // var btn = document.querySelectorAll('button');
+    // var btn = document.querySelectorAll('.btn');
+
+    // var btn = document.querySelectorAll('#btnId');
+    // var btn = document.querySelector('#btnId');
+    // btn.onclick = function(){
+    //     alert('查找到所有的btn');
+    // }
+    console.log(btn);
+</script>
+
+</html>

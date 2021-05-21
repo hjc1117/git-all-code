@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var email = prompt('请输入正确的邮箱地址:', 'susan@souhu.com');
+
+    if (email.length > 0) {
+        if (email.indexOf('@') !== -1 || email.indexOf('.com') !== -1) {
+            alert('邮箱地址正确，邮箱名称是' + email);
+        } else {
+            alert('邮箱必须包含@和.com');
+        }
+    } else {
+        alert('邮箱不能为空');
+    }
+</script>
+
+</html>

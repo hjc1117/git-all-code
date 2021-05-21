@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 350px;
+            height: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid rgb(149, 149, 149);
+            box-sizing: border-box;
+            padding: 10px;
+        }
+        
+        input {
+            float: right;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a">
+        用户名:<input type="text" id="in"> <br> 密码:
+        <input type="password" id="pa1"> <br> 重复密码:
+        <input type="password" id="pa2"><br>
+        <input type="button" id="sub" onclick="subm()" value="注册">
+    </div>
+</body>
+
+<script>
+    function subm() {
+        var user = document.getElementById('in').value;
+        var pas1 = document.getElementById('pa1').value;
+        var pas2 = document.getElementById('pa2').value;
+        if (user.length == 0) {
+            alert('用户名不能为空，重填');
+            return;
+        } else if (pas1.length == 0) {
+            alert("密码或重复密码不能为空，请重新填写！");
+            return;
+        } else if (pas1.length < 6) {
+            alert('密码长度不能小于6');
+            return;
+        } else if (pas1 !== pas2) {
+            alert("两次输入的密码不相同！");
+            return;
+        } else {
+            alert('注册成功,牢记密码');
+            return;
+        }
+
+    }
+</script>
+
+</html>

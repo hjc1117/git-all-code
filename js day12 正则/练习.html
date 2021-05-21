@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="a">
+        <h1>hhh</h1>
+        <p>ppp</p>
+    </div>
+</body>
+
+</html>
+
+<script>
+    var a = 'abc345efg';
+    var reg = /\d/g;
+    var reg1 = a.match(reg);
+    console.log(reg1);
+    var close_ = reg1.join('');
+    console.log(close_);
+    for (i = 0; i < a.match(reg).length; i++) {
+        reg1[i] = '[' + reg1[i] + ']';
+    }
+    a = a.replace(close_, reg1.join(''));
+    console.log(a);
+
+    // var div_ = document.getElementsByClassName('a')[0];
+    // var h_ = document.getElementsByTagName('h1')[0];
+    // var p_ = document.getElementsByTagName('p')[0];
+
+    // div_.replaceChild(p_, h_);
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        用户: <input type="text" name="" id="use" placeholder="admin"> <br> 密码: <input type="password" name="" id="pass"><br>
+        <input type="button" name="" id="but" value="注册" onclick="but()">
+    </div>
+</body>
+<script>
+    function but() {
+        var use = document.getElementById('use').value;
+        var pass = document.getElementById('pass').value;
+        if (pass.length < 6) {
+            alert('密码不能小于6位数');
+        } else {
+            alert('注册成功')
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="time"></div>
+</body>
+
+<script>
+    function fn() {
+        var div_ = document.getElementById('time');
+
+        // 获取当前时间
+        var now_date = new Date();
+
+        //目标时间  5月1 日  因为月是从0开始的 所以 5月 写成4
+        var after_date = new Date(2021, 4, 1);
+
+
+        // 找到时间差
+        var go_time = after_date - now_date;
+        console.log(go_time);
+
+        // 换算时间
+
+        var day = Math.floor(go_time / 1000 / 60 / 60 / 24);
+        var hour = Math.floor(go_time / 1000 / 60 / 60 % 24);
+        var min = Math.floor(go_time / 1000 / 60 % 60);
+        var s = Math.floor(go_time / 1000 % 60);
+        div_.innerHTML = '距离5月1日还有' + day + '天' + hour + '时' + min + '分' + s + '秒';
+    }
+    setInterval(fn, 1000);
+</script>
+
+</html>

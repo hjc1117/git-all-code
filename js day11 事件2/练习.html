@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        margin: auto;
+        border: 1px solid #000;
+    }
+    
+    .div1 {
+        width: 600px;
+        height: 600px;
+    }
+    
+    .div2 {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .div3 {
+        width: 200px;
+        height: 200px;
+    }
+</style>
+
+<body>
+
+    <div class="div1">
+        <div class="div2">
+            <div class="div3">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    var div_1 = document.getElementsByClassName('div1')[0];
+    var div_2 = document.getElementsByClassName('div2')[0];
+    var div_3 = document.getElementsByClassName('div3')[0];
+
+    div_1.onmouseout = function() {
+        window.event ? window.event.cancelBubble = true : e.stopPropagation(); //取消冒泡
+        alert('离开了div1')
+    }
+    div_2.onmouseout = function() {
+        window.event ? window.event.cancelBubble = true : e.stopPropagation(); //取消冒泡
+        alert('离开了div2')
+    }
+    div_3.onmouseout = function() {
+        window.event ? window.event.cancelBubble = true : e.stopPropagation(); //取消冒泡
+        alert('离开了div3')
+    }
+</script>

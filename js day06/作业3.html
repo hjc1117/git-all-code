@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //方法1
+    var arr = ['a', 'b', 'c', 'd', 'e'];
+    var newArr = [];
+    for (i = arr.length - 1; i >= 0; i--) {
+        newArr[newArr.length] = arr[i];
+    }
+    console.log(newArr);
+
+    //方法2
+    var arr1 = ['f', 'g', 'h', 'i', 'j'];
+    arr1.reverse();
+    console.log(arr1);
+
+    //方法3
+    var arr2 = [1, 2, 3, 4, 5];
+    var newArr2 = [];
+    for (i = 0; i < 5; i++) {
+        newArr2[newArr2.length] = arr2[arr2.length - 1 - i];
+        // arr2.pop(); //删除数组中最后一个元素
+    }
+    console.log(newArr2);
+</script>
+
+</html>

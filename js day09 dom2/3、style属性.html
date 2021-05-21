@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style属性</title>
+
+    <style>
+        div {
+            height: 500px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p>hahaha</p>
+
+    <div style="width: 300px;"></div>
+</body>
+
+</html>
+
+<script>
+    var p_ = document.querySelector('p');
+    p_.style.color = 'red';
+    p_.style.fontSize = '20px';
+
+
+    // 获取属性值  el.style.属性  只能拿到 内部样式  标签内部的样式
+    var div_ = document.querySelector('div');
+    console.log(div_.style.width);
+    console.log(div_.style.height);
+    console.log(div_.style.backgroundColor);
+
+
+    // 如何拿到 style 内联 或者外联的样式
+    // document.defaultView.getComputedStyle(元素, null).属性;
+
+    // window.getComputedStyle(元素，null).属性;
+
+    console.log(document.defaultView.getComputedStyle(div_).height);
+    console.log(document.defaultView.getComputedStyle(div_).backgroundColor); //rgb值
+    console.log(window.getComputedStyle(div_).width);
+</script>

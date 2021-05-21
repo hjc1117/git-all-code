@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span></span>
+    <button>开始</button>
+    <button>暂停</button>
+    <button>重置</button>
+</body>
+
+</html>
+<script>
+    var bt_star = document.querySelector('button');
+    var bt_stop = document.querySelectorAll('button')[1];
+    var bt_reset = document.querySelectorAll('button')[2];
+    var span = document.querySelector('span');
+    var num = 5;
+    var timer;
+    bt_star.onclick = function() {
+        span.style.display = 'inline-block';
+        span.style.fontSize = '40px';
+        span.style.color = 'blue';
+
+        clearInterval(timer);
+
+        timer = setInterval(function() {
+            span.innerHTML = num;
+            num--;
+            if (num < 0) {
+                clearInterval(timer);
+                num = 0;
+            }
+        }, 1000)
+    }
+    bt_stop.onclick = function() {
+        clearInterval(timer);
+    }
+    bt_reset.onclick = function() {
+        clearInterval(timer);
+        num = 5;
+        span.innerHTML = num;
+    }
+</script>

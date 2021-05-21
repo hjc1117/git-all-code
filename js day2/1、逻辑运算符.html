@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>逻辑运算符</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    //在逻辑判断中，0代表false，非零代表true
+    // 与 & 多个条件同时满足  false  有任意一个不满足  false  全部满足 true
+    //  或 | 满足任意一个条件就可以  true    
+    // 非  ！ 取反  就不
+
+    var a = 10;
+    var b = 100;
+    //             true   true  false
+    // var bool = (a>=10)&(b<101)&(b>199);
+    // var bool = a>=10 & b<101 & b>199;
+
+
+    // var bool = a>10 && b<101 ;
+    
+    //|  或者
+    var bool= a>100 || b<101;
+
+    // ！ 非 取反
+    // var bool =  a!=100;
+
+    console.log(bool);
+    console.log(Boolean(bool));
+</script>
+</html>

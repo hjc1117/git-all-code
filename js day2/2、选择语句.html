@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>选择语句</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    //  if（true）{
+    //     执行的代码
+    // }
+    //  prompt 接收到的数据类型 全部是 string类型
+
+    var score = parseFloat(prompt('请输入您的成绩：'));
+
+    if (score <= 750 && score >= 0) {
+        if (score >= 600) {
+            // 条件满足执行的内容
+            alert('恭喜你可以上985大学');
+        } else if (score > 500) {
+            alert('你可以去211啊');
+        } else if (score > 450) {
+            alert('你可以读普通本科');
+        } else if (score > 200) {
+            alert('你可以读大专');
+        } else {
+            alert('你下东南吧');
+        }
+    }else{
+        alert('瞎输，滚蛋');
+    }
+
+
+
+
+
+</script>
+
+</html>

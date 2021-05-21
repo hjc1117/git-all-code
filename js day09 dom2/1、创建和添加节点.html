@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创建添加节点</title>
+</head>
+<body>
+    <ul id="ulId">
+
+    </ul>
+    
+</body>
+
+<script>
+    // 1、找到ul节点  id 是ulId
+    var ul_ = document.getElementById('ulId');
+
+    //创建节点  
+    var li_1 = document.createElement('li'); //<li></li>
+    li_1.innerHTML = '你好老陈';
+    //创建文本节点
+    // var txt = document.createTextNode('你好小春');
+    // li_1.appendChild(txt);//<li>你好小春</li>
+
+    // 把 li_1  添加到ul中
+    ul_.appendChild(li_1);
+
+    // 创建  追加节点   插入到之前
+    var li_2 = document.createElement('li');
+    li_2.innerHTML = '第二个li';
+    //  appendChild  添加到最后
+    ul_.appendChild(li_2);
+
+
+    // 插入到之前
+    var li_3 = document.createElement('li');
+    li_3.innerHTML = '小三，上位';
+
+    // 插入到 li_2 之前
+    ul_.insertBefore(li_3,li_1);
+
+
+    // 克隆  ul_ 元素
+    // a.cloneNode(deep） a:要复制的节点 
+    //                     deep ： true: 深赋值  把当前节点的所有子节点 全部赋值
+    //                      deep： false  默认  只拿到当前节点 
+    console.log(ul_.cloneNode(true)); // ul 带li 全部克隆
+    console.log(ul_.cloneNode()); // 只赋值  ul节点
+</script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date时间对象</title>
+
+    <style>
+        div {
+            width: 500px;
+            height: 200px;
+            background-color: rgb(131, 218, 245);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+
+</body>
+
+<script>
+    /*  getFullYear() 返回 Date 对象的年份，其值为4位数
+                    getMonth() 返回 Date 对象的月份，其值介于0～11之间（注：0 - 1月份）
+                    getDate() 返回 Date 对象的日，其值介于0～31之间
+                    getHours() 返回 Date 对象的小时数，其值介于0～23之间
+                    getMinutes() 返回 Date 对象的分钟数，其值介于0～59之间
+                    getSeconds() 返回 Date 对象的秒数，其值介于0～59之间
+                    getDay()  返回 Date 对象的星期中的每一天，其值介于0～6之间（注：0 - 周日） */
+
+    /* var date = new Date();
+    // 获取年份：
+    var year = date.getFullYear();
+    document.write(year+'年');
+
+    var month = date.getMonth();
+    document.write(month+'月');
+    var day = date.getDate();
+    document.write(day+'日');
+
+    var hour = date.getHours();
+    document.write(hour+'时');
+
+    var minu = date.getMinutes();
+    document.write(minu+'分');
+
+    var sec = date.getSeconds();
+    document.write(sec+'秒');
+
+    var week = date.getDay();
+    document.write('星期'+week);
+
+
+    document.write(date); */
+
+    var div_ = document.getElementsByTagName('div')[0];
+
+
+    setInterval(function() {
+        //setIntrval（函数，时间）,无限循环，每隔多少毫秒执行一次函数
+        //无线循环执行，后面跟的100是毫秒值，每1000毫秒执行一次函数 
+        var date = new Date();
+        // 获取年份：
+        var year = date.getFullYear();
+        var month = date.getMonth();
+        var day = date.getDate();
+        var hour = date.getHours();
+        var minu = date.getMinutes();
+        var sec = date.getSeconds();
+        var week = date.getDay();
+        // var str = year+'年'+month+'月'+day+'日'+hour+':'+minu+':'+sec+'&nbsp;&nbsp;&nbsp;'+'星期'+week;
+        var str = year + '年' + month + '月' + day + '日' + hour + ':' + minu + ':' + time(sec) + '&nbsp;&nbsp;&nbsp;' + '星期' + week;
+        // document.write(str);
+        div_.innerHTML = str;
+    }, 1000);
+
+    function time(s) {
+        return s > 10 ? s : ('0' + s);
+    }
+</script>
+
+</html>

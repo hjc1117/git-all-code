@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="time"></div>
+</body>
+<script>
+    var future_time = new Date(2021, 4, 20, 0, 0, 0); //也可以像下面这么写
+
+    var go = setInterval(function nowtime() {
+
+        var now_time = new Date();
+        var differ_time = future_time - now_time;
+
+        var day = Math.floor(differ_time / 1000 / 60 / 60 / 24);
+        var hour = Math.floor(differ_time / 1000 / 60 / 60 % 24);
+        var min = Math.floor(differ_time / 1000 / 60 % 60);
+        var sec = Math.floor(differ_time / 1000 % 60);
+        document.getElementById('time').innerHTML = '距离520还有' + day + '天' + hour + '小时' + min + '分' + sec + '秒';
+        // return function() {
+        //     var arr = [day, hour, min, sec];
+        //     return arr;
+        // }
+        if (day <= 0 && hour <= 0 && min <= 0 && sec <= 0) {
+            clearInterval(go)
+        }
+    }, 1);
+
+
+    // console.log(go);
+    // var x = nowtime()
+    // console.log(x());
+    // console.log(x()[0], x()[1], x()[2], x()[3]);
+    // if (x()[0] <= 0 && x()[1] <= 0 && x()[2] <= 0 && x()[3] <= 0) {
+    //     clearInterval(go);
+    // }
+
+
+    // function nowtime() {
+    //     var now_time = new Date();
+    //     var future_time = new Date(2021, 3, 21, 9, 06, 00);
+    //     var differ_time = future_time - now_time;
+
+    //     var day = Math.floor(differ_time / 1000 / 60 / 60 / 24);
+    //     var hour = Math.floor(differ_time / 1000 / 60 / 60 % 24);
+    //     var min = Math.floor(differ_time / 1000 / 60 % 60);
+    //     var sec = Math.floor(differ_time / 1000 % 60);
+    //     document.getElementById('time').innerHTML = '距离五一还有' + day + '天' + hour + '小时' + min + '分' + sec + '秒';
+    //     return function() {
+    //             var arr = [day, hour, min, sec];
+    //             return arr;
+    //         }
+    //         // if (day <= 0 && hour <= 0 && min <= 0 && sec <= 0) {
+    //         //     clearInterval(go)
+    //         // }
+
+    // }
+    // var go = setInterval(nowtime, 1);
+    // var x = nowtime()
+    //     // console.log(x());
+    //     // console.log(x()[0], x()[1], x()[2], x()[3]);
+    // if (x()[0] <= 0 && x()[1] <= 0 && x()[2] <= 0 && x()[3] <= 0) {
+
+    //     clearInterval(go);
+
+    // }
+</script>
+
+</html>

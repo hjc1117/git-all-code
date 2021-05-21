@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #list {
+            list-style: none;
+            width: 400px;
+            margin: 0 auto;
+        }
+        
+        #list>li {
+            border-bottom: 2px solid rgb(221, 218, 218);
+            padding-bottom: 20px;
+        }
+        
+        #list>li>img {
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="sData()">展示数据</button>
+    <!-- 3.找到需要展示的区域 -->
+    <ul id="list_">
+    </ul>
+</body>
+
+</html>
+
+<!-- 2.获取数据 -->
+<script>
+    function sData() {
+        var ajax_ = new XMLHttpRequest() || new ActiveXObject();
+
+        ajax_.open('get', './doT.json', true);
+
+        ajax_.send();
+
+        ajax_.onreadystatechange = function() {
+
+            if (ajax_.readyState == 4) {
+                if (ajax_.status == 200) {
+
+                    var data = JSON.parse(ajax_.responseText);
+                    //2.把响应到的数据接收并从数据转化成对象
+                    //此时 拿到数据data
+
+                    //5. 调用方式   传数据到模板里，找到模板的id
+                    var tmpText = doT.template(document.getElementById('templ').innerHTML);
+                    document.getElementById('list_').innerHTML = tmpText(data.list); //这里的list是doT.json的list对象
+                    //将获得的对象赋值到id名为list的ul标签并添加到html里
+
+                } else {
+                    console.log('请求失败');
+                }
+            }
+        }
+    }
+</script>
+
+<!-- 1.引入dot.js -->
+<script src="./doT.min.js"></script>
+
+<!-- 4.创建模板 -->
+<script id="templ" type="text/x-dot-template">
+    <!-- 6.拿到数据以后将数据拼接好并赋值入html -->
+    {{~it:value:index}}
+    <li>
+        <p>{{=value.imgtitle}}</p>
+        <img src="{{=value.imgurl}}">
+        <div>{{=value.note}}</div>
+    </li>
+    {{~}}
+</script>

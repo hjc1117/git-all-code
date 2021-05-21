@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="close_()">关闭</button>
+    <button onclick="open_()">打开</button>
+    
+</body>
+
+<script>
+    function close_(){
+        window.close();
+    }
+
+    function open_(){
+        // opent('要打开的路径'，'b');
+        //                    --  b代表打开方式：
+        //                    --  _self   当前页面打开
+        //                    --  _blank   新建页面打开   默认
+        // window.open('http://www.baidu.com','_self');
+        window.open('http://www.baidu.com','_blank');
+    }
+   
+</script>
+</html>

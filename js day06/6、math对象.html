@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // console.log(Math.abs(-5)); 
+    // // 向上取整
+    // console.log(Math.ceil(25.5356));
+    // // 向下取整
+    // console.log(Math.floor(25.8));
+
+    //四舍五入
+    // console.log(Math.round(25.5));//26
+    // console.log(Math.round(-25.6));//-25
+    // console.log(Math.round(-24.8));//-24    
+    // console.log(Math.round(-25.1));//-25
+    // 正值的时候：  四舍五入
+
+
+    // console.log(Math.round(-25.5));// -25
+    // console.log(Math.round(-25.500001));// -26
+    // console.log(Math.round(-25.6));// -26
+
+
+    // 生成随机数  0--1  之间的随机数 
+    // console.log(Math.round(Math.random()*100));
+
+
+    var arry = [];
+    // 生成10个 10-100之间的随机数  并进行排序
+    for(var i = 0;i<10;i++){
+        var num = Math.round(Math.random()*100);
+        if(num<10){
+            num += 10;
+        }
+        arry[i] = num;
+    }
+
+    arry.sort(function(a,b){
+        return b-a;
+    });
+
+    console.log(arry);
+
+
+</script>
+</html>

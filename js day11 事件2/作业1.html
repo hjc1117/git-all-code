@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            margin: 0 auto;
+        }
+        
+        img {
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        #ret {
+            width: 100px;
+            height: 100px;
+            background-color: #999;
+            text-align: center;
+            line-height: 100px;
+            position: absolute;
+            top: 754px;
+            right: 10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id="ret">
+            返回顶部
+        </div>
+        <img src="./img/bj.png" alt="">
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    var div_ = document.getElementsByTagName('div')[0];
+    // div_.onclick = function(e) {
+    //     e = e || window.event;
+    //     console.log(e.clientY); //1467px
+    // }
+    var ret = document.getElementById('ret');
+    window.document.onscroll = function() {
+        var l = document.documentElement.scrollTop; //714px-200px
+        ret.style.top = 514 + l + 'px'
+        if (l > 800) {
+            ret.style.display = 'block';
+        } else {
+            ret.style.display = 'none';
+        }
+    }
+    var time_;
+    ret.onclick = function() {
+        clearInterval(time_);
+        time_ = setInterval(function() {
+            var y = document.documentElement.scrollTop -= 200;
+            if (y <= 0) {
+                clearInterval(time_);
+            }
+        }, 30)
+    }
+</script>

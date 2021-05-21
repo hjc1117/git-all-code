@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择自己喜欢的书籍</title>
+
+    <style>
+        span{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    请选择喜欢的书籍：
+    <input type="radio" name="check" onclick="books()">我和狗狗一起活下去 0
+    <input type="radio" name="check" onclick="books()">灰霾来了怎么办1
+    <br>
+    <img src="" alt="">
+    <span></span>
+</body>
+
+
+<script>
+    
+    function books(){
+        // 1、获取input框
+        var ipt_ = document.getElementsByTagName('input');
+        //2、找到图片和span
+        var img_ = document.querySelector('img');
+        var span_ = document.querySelector('span');
+        if(ipt_[0].checked){
+            img_.setAttribute('src','./image/dog.jpg');
+            span_.innerHTML = '我和狗狗一起活下去';
+            span_.style.color = 'rgb(49,70,45)';
+
+        }
+        if(ipt_[1].checked){
+            img_.setAttribute('src','./image/mai.jpg');
+            span_.innerHTML = '灰霾来了怎么办';
+            span_.style.color = 'rgb(1,147,222)';
+        }
+
+    }
+</script>
+</html>

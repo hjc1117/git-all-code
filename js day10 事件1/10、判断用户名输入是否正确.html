@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>判断用户名</title>
 </head>
+
 <body>
     用户名：<input type="text">
     <span hidden></span>
 </body>
+
 </html>
 
 <script>
@@ -16,7 +19,7 @@
     var span_ = document.querySelector('span');
 
     // 获取焦点的时候
-    inpt.onfocus = function(){
+    inpt.onfocus = function() {
         inpt.style.color = 'red';
         //给span设置样式
         span_.style.display = 'inline-block';
@@ -24,12 +27,12 @@
     }
 
     //失去焦点的时候
-    inpt.onblur = function(){
+    inpt.onblur = function() {
         // console.log(inpt.value,inpt.value.length);
         //对输入内容的长度进行判断
-        if(inpt.value.length<6||inpt.value.length>12){
+        if (inpt.value.length < 6 || inpt.value.length > 12) {
             span_.innerHTML = '用户名输入格式有误';
-        }else{
+        } else {
             span_.innerHTML = '厉害呀，这都输对了';
         }
     }

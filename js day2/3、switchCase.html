@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+
+    // 做一个工作计划 根据星期几 执行不同的内容
+    var day = prompt('请输入星期几');
+
+    // case击穿   
+    // switch  case  进行等值判断 要判断的值 是固定的
+    //  if else  进行区间的判断
+    switch (day) {
+        case '1':
+        case '2':
+        case '3':
+            alert('工作日，好好工作');
+            break;
+
+        case '4':
+            alert('星期4，赶紧放假ba');
+            break;
+
+        case '5':
+            alert('星期5,准备撤退');
+            break;
+        case '6':
+            alert('星期6，睡个懒觉');
+            break;
+        case '7':
+            alert('星期日，哎呀，又要遭罪了');
+            break;
+        default:
+            alert('瞎输，滚蛋');
+    }
+
+</script>
+
+</html>

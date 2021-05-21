@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: brown;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+
+    </div>
+</body>
+
+</html>
+<script>
+    var div_ = document.getElementsByTagName('div')[0];
+    div_.onmousedown = function(e) {
+        e = e || window.event;
+        //得到点击鼠标时距离div的距离
+        var x = e.offsetX;
+        var y = e.offsetY;
+        // console.log(x, y);
+
+        div_.onmousemove = function(e) {
+            e = e || window.event;
+            //用点击鼠标时鼠标距离dom的距离减去鼠标与div的距离，得到div的边界与dom的距离，赋给css
+            div_.style.left = (e.clientX - x) + 'px';
+            div_.style.top = (e.clientY - y) + 'px';
+        }
+    }
+    div_.onmouseup = function() {
+        div_.onmousemove = null
+    }
+</script>

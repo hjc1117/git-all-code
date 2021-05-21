@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    // c 在字符串中出现的次数 4
+
+    // 把所有出现c的下标  用一个数组保存  2,4,6,7
+
+    var str = 'abcdcfcc';
+    var index = 0; // 计算出现的次数
+
+    var s_arr = str.split('');
+    console.log(s_arr);
+
+    // 定义空的数组 用来装下标数据
+    var in_num = [];
+    for (var i = 0; i < s_arr.length; i++) {
+        if (s_arr[i] === 'c') {
+            in_num.push(i);
+            index++;
+        }
+    }
+
+    console.log('出现了多少次：' + index);
+    console.log(in_num);
+    //1、把字符串转为数组 split'' 得到数组
+    // 2、遍历数组  进行判断  满足条件  +1
+</script>
+
+</html>

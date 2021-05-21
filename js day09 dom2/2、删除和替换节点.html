@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>删除和替换节点</title>
+</head>
+<body>
+    <img src="./images/hai.jpg" alt="">
+    <p>哈哈哈，我是个p,今天听了一个典故，潘嘎之交</p>
+
+
+</body>
+
+<script>
+    // 删除节点
+    // 父节点.removeChild( 子节点)
+    var img_ = document.querySelector('img');
+    img_.onclick = function(){
+        img_.parentNode.removeChild(img_);
+    }
+    
+
+    //替换节点
+    // 父节点.replaceChild( newNode, oldNode)
+
+    var h1_ = document.createElement('h1');
+    h1_.innerHTML = '这里水深，你把握不住';
+
+
+    // 把p标签 替换成 h1_ 
+    var p_ = document.querySelector('p');
+    p_.parentNode.replaceChild(h1_,p_);
+    
+</script>
+</html>

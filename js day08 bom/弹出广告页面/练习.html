@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .black_ {
+            width: 100%;
+            height: 3128px;
+            background-color: black;
+            opacity: .3;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        .img_ {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background">
+        <img src="../images/bj.png" alt="">
+    </div>
+</body>
+<script>
+    var show = function() {
+        var body_ = document.getElementsByTagName('body')[0]; //获取body
+
+
+        var new_div = document.createElement('div'); //定义一个创造div元素的变量
+        new_div.className = 'black_'; //给div起一个类名
+        body_.appendChild(new_div); //把div添加到body里
+
+        var new_img = document.createElement('img');
+        new_img.className = 'img_';
+        new_img.src = '../images/pic.png';
+        body_.appendChild(new_img);
+
+        new_img.onclick = function() {
+            body_.removeChild(new_img);
+            body_.removeChild(new_div);
+        }
+    }
+    setTimeout(show, 1);
+</script>
+
+</html>

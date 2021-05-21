@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <form action="login.html">
+        <div>
+            <label for=""><span>会员名：</span><input type="text" id="user" class="text"></label>
+            <p class="message"><i class="active"></i>6-12个字符，推荐使用中文会员名</p>
+        </div>
+        <div>
+            <label for=""><span>登录密码：</span><input type="password" id="psd" class="text"></label>
+            <p class="message"><i class="active"></i>5-25个字符</p>
+        </div>
+        <div>
+            <label for=""><span>确认密码：</span><input type="password" id="psd2" class="text"></label>
+            <p class="message"><i class="active"></i>请再输入一次</p>
+        </div>
+        <div>
+            <input type="button" value="同意协议并注册" id="submitBtn">
+        </div>
+    </form>
+</body>
+
+</html>
+<script>
+    var inp = document.getElementById('user');
+    var pas = document.getElementById('psd');
+    var pass = document.getElementById('psd2');
+    var btn = document.getElementById('submitBtn');
+    var p_ = document.getElementsByClassName('message');
+    inp.onfocus = function() {
+        p_[0].style.display = 'block';
+        p_[0].innerHTML = '<i class="active"></i>6-12个字符，推荐使用中文会员名';
+    }
+    inp.onblur = function() {
+        reg = /[\w\u4e00-\u9fa5]{6,12}/m;
+        if (inp.value == '') {
+            p_[0].innerHTML = '<i class="active"></i>用户名不能为空';
+            return false;
+        } else if (!reg.test(inp.value)) {
+            p_[0].innerHTML = '长度不在范围内或者存在非法字符';
+            return false;
+        } else {
+            p_[0].innerHTML = '用户名可用';
+            return true;
+        }
+    }
+    pas.onfocus = function() {
+        p_[1].style.display = 'block';
+        p_[1].innerHTML = '长度在6-12个字符'
+    }
+    pas.onblur = function() {
+        reg = /\w{6,12}/m;
+        reg_num = /\d/m;
+        reg_word = /[a-zA-Z]/m;
+        if (pas.value == '') {
+            p_[1].innerHTML = '<i class="err"></i>密码不能为空'
+            return false;
+        } else if (!reg.test(pas.value)) {
+            p_[1].innerHTML = '<i class="err"></i>长度不在范围内，或存在非法字符';
+        } else if (!reg_num.test(pas.value)) {
+            p_[1].innerHTML = '<i class="err"></i>不能全是数字'
+        } else if (!reg_word.test(pas.value)) {
+            p_[1].innerHTML = '<i class="err"></i>不能全是字母'
+        } else {
+            p_[1].innerHTML = '<i class="ok"></i>正确'
+            return true;
+        }
+    }
+    pass.onfocus = function() {
+        p_[2].style.display = 'block';
+        p_[2].innerHTML = '请输入相同密码'
+    }
+    pass.onblur = function() {
+        if (pass.value == '') {
+            p_[2].innerHTML = '<i class="err"></i>不能为空';
+        } else if (pas.value != pass.value) {
+            p_[2].innerHTML = '<i class="err"></i>两次密码不一致';
+        } else {
+            p_[2].innerHTML = '<i class="ok"></i>密码输入一致';
+            return true;
+        }
+    }
+    btn.onclick = function() {
+        if (inp.onblur() && pas.onblur() && pass.onblur()) {
+            //document.forms[0].submit();
+            document.getElementsByTagName("form")[0].submit();
+        }
+    }
+</script>

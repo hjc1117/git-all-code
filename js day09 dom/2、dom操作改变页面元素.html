@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button>点击dom.write</button>
+    <button>点击innerHTML</button>
+    
+    <div></div>
+    <img src="./image/hai.jpg" >
+</body>
+
+<script>
+    var btn = document.getElementsByTagName('button');
+    btn[0].onclick = function(){
+        document.write('你好世界，世界被我颠覆');
+    }
+
+    //通过标签 找到第一个吻合的元素
+    var div = document.querySelector('div');
+    btn[1].onclick = function(){
+        // div.innerHTML = '<h1>我是通过innerHTML添加了内容</h1>';
+        div.innerHTML = '我是通过innerHTML添加了内容';
+        // div.innerText = '<h1>我是通过innerText添加了内容</h1>';
+        div.style.backgroundColor = 'rgb(220,77,65)';
+        div.style.width = '300px';
+        div.style.height = '400px';
+    }
+
+    var img_ = document.querySelector('img');
+    img_.src = './image/change.jpg';
+</script>
+</html>

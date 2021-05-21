@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            width: 606px;
+            height: 606px;
+            margin: 100px auto;
+            text-align: center;
+            border: 1px solid #000;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        li {
+            border: 1px solid #000;
+            width: 200px;
+            height: 200px;
+            float: left;
+            line-height: 200px;
+            position: relative;
+        }
+        
+        .clear {
+            display: inline-block;
+            clear: both;
+        }
+        
+        button {
+            width: 70px;
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            height: 30px;
+        }
+        
+        button:first-of-type {
+            left: 10px;
+        }
+        
+        .bg {
+            background-color: rgb(88, 57, 57);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>吃拉面</li>
+            <li>黄焖鸡</li>
+            <li>麻辣烫</li>
+            <li>酸辣粉</li>
+            <li>吃啥?
+                <button>转！</button>
+                <button>停！</button>
+            </li>
+            <li>泡馍</li>
+            <li>姐弟俩</li>
+            <li>螺蛳粉</li>
+            <li>凉皮</li>
+            <span class="clear"></span>
+        </ul>
+    </div>
+</body>
+
+</html>
+
+<script>
+    // var btn = document.getElementsByTagName('button');
+    // var li_ = document.getElementsByTagName('li');
+
+    // var arr = [0, 1, 2, 5, 8, 7, 6, 3];
+
+    // var num = 0;
+    // var time_;
+    // btn[0].onclick = function() {
+    //     clearInterval(time_);
+    //     time_ = setInterval(function() {
+    //         for (i = 0; i < arr.length; i++) {
+    //             li_[arr[i]].className = '';
+    //         }
+    //         num++;
+    //         if (num >= arr.length) {
+    //             num = 0;
+    //         }
+    //         li_[arr[num]].className = 'bg';
+    //     }, 3)
+    // }
+    // btn[1].onclick = function() {
+    //     clearInterval(time_);
+    // }
+
+
+    var btn = document.getElementsByTagName('button');
+    var li_ = document.getElementsByTagName('li');
+    var num = 0;
+    var arr = [0, 1, 2, 5, 8, 7, 6, 3];
+    var timer;
+    btn[0].onclick = function() {
+        clearInterval(timer);
+        timer = setInterval(function() {
+            for (i = 0; i < arr.length; i++) {
+                li_[arr[i]].className = '';
+            }
+            num++;
+            if (num >= arr.length) {
+                num = 0;
+            }
+            li_[arr[num]].className = 'bg';
+        }, 3)
+    }
+    btn[1].onclick = function() {
+        clearInterval(timer);
+    }
+</script>

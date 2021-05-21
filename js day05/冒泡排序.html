@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+        //pink版
+        // var exc = 0;
+        // var arr = [2, 3, 5, 1, 4, 8, 6, 7, 10, 9];
+        // for (var i = 0; i < arr.length; i++) {
+        //     for (j = 0; j < arr.length - i; j++) { //因为是数组,数组下标是从0开始计数的，下面要用到arr[j],所以j要从0开始，i代表的是相比较的次数计数,n个数据比较n-1次（因为是两个数在比）
+        //         if (arr[j] > arr[j + 1]) { //如果前一位数比后一位数大，则交换两个数
+        //             exc = arr[j];
+        //             arr[j] = arr[j + 1];
+        //             arr[j + 1] = exc;
+        //         }
+        //     }
+        // }
+        // console.log(arr)
+
+
+        //  老陈版
+        // var arr = [7, 8, 1, 4, 5, 6, 2, 3];
+        // for (i = 0; i < arr.length; i++) {
+        //     //8 //1
+        //     for (j = i + 1; j <= arr.length; j++) {
+        //         if (arr[i] > arr[j]) {
+        //             var c = arr[i];
+        //             arr[i] = arr[j];
+        //             arr[j] = c;
+        //             // document.write(arr + '&nbsp;&nbsp;&nbsp;' + arr[i] + ':' + arr[j] + '<br>');
+        //             //可以看到每次的变化
+        //         }
+        //     }
+        // }
+        // document.write(arr);
+
+        // var arr = [7, 8, 1, 4, 5, 6, 2, 3];
+        // for (var i in arr) {
+        //     for (var j = i + 1 in arr) {
+        //         if (arr[i] < arr[j]) {
+        //             var c = arr[i];
+        //             arr[i] = arr[j];
+        //             arr[j] = c;
+        //         }
+        //     }
+        // }
+        // document.write(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

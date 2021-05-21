@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>论坛列表</title>
+    <link href="css/bbs.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="bbs">
+        <header><span onclick="post()">我要发帖</span></header>
+        <section>
+            <ul id="postList">
+                <li>
+                    <div><img src="images/tou03.jpg"></div>
+                    <h1>wo title</h1>
+                    <p>
+                        <span>版块：电子书籍</span>
+                        <span>发表时间：2018-8-26 11:29</span>
+                    </p>
+                </li>
+            </ul>
+        </section>
+        <div class="post" id="post">
+            <input class="title" placeholder="请输入标题（1-50个字符）" id="title"> 所属版块：
+            <select id="sec">
+            <option>请选择版块</option>
+            <option>电子书籍</option>
+            <option>新课来了</option>
+            <option>新手报到</option>
+            <option>职业规划</option>
+        </select>
+            <textarea class="content" id="content"></textarea>
+            <input type='button' class="btn" value="发布" onclick="postSuccess()">
+        </div>
+    </div>
+
+    <!-- <script src="./js/my.js"></script> -->
+
+</body>
+
+<script>
+    function post() {
+        var inp = document.getElementById('post');
+        inp.style.display = 'block'
+    }
+
+    function postSuccess() {
+        //头像
+        var pic_arr = ['tou01.jpg', 'tou02.jpg', 'tou03.jpg', 'tou04.jpg'];
+        var li_ = document.createElement('li'); //生一个li
+        var div_ = document.createElement('div'); //生一个div
+        var img_ = document.createElement('img'); //生一个img
+        var img_src = Math.floor(Math.random() * 4); //随机数生成0-3的数，正好可以用来当选取图片数组的下标
+
+        img_.setAttribute('src', './images/' + pic_arr[img_src]);
+
+        div_.appendChild(img_); //图片加到div后头
+
+
+        //h1
+        var hh1 = document.createElement('h1'); //生个h1
+        var title = document.getElementById('title').value; //得到id=title的value值
+        hh1.innerHTML = title; //输入的title值赋值给hhi----即新生成的h1
+
+        //p
+        var pp = document.createElement('p'); //生个p
+        var span_text = document.createElement('span'); //生个span
+        var mas = document.getElementById('sec').value; //得到id=sec的信息
+        span_text.innerHTML = '板块:' + mas; //写上去
+
+        //time
+        var date = new Date();
+        var now_date = date.getFullYear() + '年' + (date.getMonth() + 1) + '月' + date.getDay() + '日' +
+            date.getHours() + '点' + date.getMinutes() + '分'
+        var span_time = document.createElement('span');
+        span_time.innerHTML = '发布时间:' + now_date; //建立好的时间塞进去
+
+        //儿子开始排队
+        pp.appendChild(span_text);
+        pp.appendChild(span_time);
+
+        //爹也开始排队
+        li_.appendChild(div_);
+        li_.appendChild(hh1);
+        li_.appendChild(pp);
+
+
+        //找到新创建的爹
+        var postList = document.getElementById('postList');
+        //塞进去，塞到最上面
+        postList.insertBefore(li_, postList.firstElementChild); //把li_塞到他爹的第一个儿元素之前(无限插队)
+
+        //清空
+        document.getElementById('title').value = '';
+        document.getElementById('content').value = '';
+
+        //发布
+        var inp = document.getElementById('post');
+        inp.style.display = 'none';
+    }
+</script>
+
+
+
+</html>
